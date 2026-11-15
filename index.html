@@ -1,605 +1,632 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover"
+    />
+    <meta name="theme-color" content="#f7f7fa" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta
+      name="description"
+      content="A special, handcrafted interactive birthday experience."
+    />
+    <title>Happy Birthday! — A Special Chapter</title>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport"
-    content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
-  <meta name="theme-color" content="#09080e">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <meta name="description" content="A special, handcrafted interactive birthday experience.">
-  <title>Happy Birthday! — A Special Chapter</title>
+    <!-- Modern Typography Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Mono:wght@400;700&family=Syne:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
 
-  <!-- Modern Typography Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Mono:wght@400;700&family=Syne:wght@600;700;800&display=swap"
-    rel="stylesheet">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- Canvas Confetti -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
 
-  <!-- Lucide Icons -->
-  <script src="https://unpkg.com/lucide@latest"></script>
-  <!-- Canvas Confetti -->
-  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-  <link rel="stylesheet" href="style.css">
-</head>
+  <body>
+    <!-- Ambient Deep Noir Backdrop -->
+    <div class="ambient-backdrop">
+      <div class="grain-overlay"></div>
+      <div class="ambient-spotlight spot-1"></div>
+      <div class="ambient-spotlight spot-2"></div>
+    </div>
 
-<body>
-  <!-- Ambient Deep Noir Backdrop -->
-  <div class="ambient-backdrop">
-    <div class="grain-overlay"></div>
-    <div class="ambient-spotlight spot-1"></div>
-    <div class="ambient-spotlight spot-2"></div>
-  </div>
+    <!-- Audio Element for Genuine Happy Birthday Song -->
+    <audio
+      id="hbdAudio"
+      src="assets/Gellen Martadinata - Selamat Ulang Tahun ( Unofficial Music Video & Lyric ).mp3"
+      preload="auto"
+      loop
+    ></audio>
 
-  <!-- Audio Element for Genuine Happy Birthday Song -->
-  <audio id="hbdAudio" src="assets/Gellen Martadinata - Selamat Ulang Tahun ( Unofficial Music Video & Lyric ).mp3"
-    preload="auto" loop></audio>
+    <!-- Top Floating Bar: Audio & Ambient Control -->
+    <header class="app-floating-nav">
+      <button
+        id="quickSoundBtn"
+        class="nav-circle-btn sound-nav-btn"
+        title="Audio"
+        aria-label="Audio"
+      >
+        <i data-lucide="volume-2" id="soundIcon"></i>
+      </button>
+    </header>
 
-  <!-- Top Floating Bar: Settings & Sound Status -->
-  <header class="app-floating-nav">
-    <button id="openSettingsBtn" class="nav-circle-btn" title="Kustomisasi Data" aria-label="Kustomisasi Hadiah">
-      <i data-lucide="sliders-horizontal"></i>
-    </button>
-
-    <button id="quickSoundBtn" class="nav-circle-btn sound-nav-btn" title="Audio" aria-label="Audio">
-      <i data-lucide="volume-2" id="soundIcon"></i>
-    </button>
-  </header>
-
-  <!-- Main Mobile Frame Container -->
-  <main class="mobile-canvas" id="mobileCanvas">
-
-    <!-- ==============================================
+    <!-- Main Mobile Frame Container -->
+    <main class="mobile-canvas" id="mobileCanvas">
+      <!-- ==============================================
          SCENE 1: EDITORIAL LOADING SCREEN
          ============================================== -->
-    <section id="scene-loading" class="scene active">
-      <div class="editorial-loading">
-        <div class="loading-top-meta">
-          <span class="meta-label">MEMORABILIA ARCHIVE</span>
-          <span class="meta-date" id="currentLocalDate">VOL. 2026</span>
-        </div>
-
-        <div class="loading-hero-center">
-          <div class="polaroid-preview-stack">
-            <div class="preview-card card-back"></div>
-            <div class="preview-card card-mid"></div>
-            <div class="preview-card card-front">
-              <div class="card-inner-photo">
-                <img src="https://images.unsplash.com/photo-1513151233558-d860c5398176?auto=format&fit=crop&w=600&q=80"
-                  alt="Memory Preview" id="loadingCoverImg">
-                <div class="card-date-badge">'26 09 29</div>
+      <section id="scene-loading" class="scene active">
+        <div class="editorial-loading">
+          <div class="loading-hero-center">
+            <div class="polaroid-preview-stack">
+              <div class="preview-card card-back"></div>
+              <div class="preview-card card-mid"></div>
+              <div class="preview-card card-front">
+                <div class="card-inner-photo">
+                  <img
+                    src="assets/foto1.jpeg"
+                    alt="Memory Preview"
+                    id="loadingCoverImg"
+                  />
+                  <div class="card-date-badge">12 12 06</div>
+                </div>
+                <div class="card-caption-line">
+                  A special soul was born today.
+                </div>
               </div>
-              <div class="card-caption-line">A special soul was born today.</div>
+            </div>
+
+            <div class="loading-editorial-copy">
+              <p class="edition-sub">CELEBRATING LIFE &amp; MEMORIES</p>
+              <h1 class="edition-title">Surprise Kamu Sedang Disiapkan...</h1>
+              <p class="edition-status" id="loadingStatusText">
+                Mengumpulkan lembar-lembar kenangan terindah...
+              </p>
             </div>
           </div>
 
-          <div class="loading-editorial-copy">
-            <p class="edition-sub">CELEBRATING LIFE &amp; MEMORIES</p>
-            <h1 class="edition-title">Surprise Kamu Sedang Disiapkan...</h1>
-            <p class="edition-status" id="loadingStatusText">Mengumpulkan lembar-lembar kenangan terindah...</p>
+          <!-- Sleek Editorial Progress -->
+          <div class="loading-progress-block">
+            <div class="progress-meta">
+              <span class="status-code">PREPARING SURPRISE</span>
+              <span class="progress-digits" id="progressPercent">00%</span>
+            </div>
+            <div class="progress-bar-track">
+              <div class="progress-bar-fill" id="progressFill"></div>
+            </div>
+          </div>
+
+          <div class="loading-bottom-action">
+            <button id="btnProceedPin" class="btn-editorial-main" disabled>
+              <span class="btn-text">Buka Kado Kejutan</span>
+              <i data-lucide="arrow-right"></i>
+            </button>
           </div>
         </div>
+      </section>
 
-        <!-- Sleek Editorial Progress -->
-        <div class="loading-progress-block">
-          <div class="progress-meta">
-            <span class="status-code">PREPARING SURPRISE</span>
-            <span class="progress-digits" id="progressPercent">00%</span>
-          </div>
-          <div class="progress-bar-track">
-            <div class="progress-bar-fill" id="progressFill"></div>
-          </div>
-        </div>
-
-        <div class="loading-bottom-action">
-          <button id="btnProceedPin" class="btn-editorial-main" disabled>
-            <span class="btn-text">Buka Kado Kejutan</span>
-            <i data-lucide="arrow-right"></i>
-          </button>
-        </div>
-      </div>
-    </section>
-
-    <!-- ==============================================
+      <!-- ==============================================
          SCENE 2: iOS-INSPIRED PASSCODE SECURITY
          ============================================== -->
-    <section id="scene-pin" class="scene">
-      <div class="pin-layout">
-        <div class="pin-header-editorial">
-          <div class="pin-lock-avatar">
-            <i data-lucide="lock" id="lockIcon"></i>
+      <section id="scene-pin" class="scene">
+        <div class="pin-layout">
+          <div class="pin-header-editorial">
+            <div class="pin-lock-avatar">
+              <i data-lucide="lock" id="lockIcon"></i>
+            </div>
+            <h2 class="pin-heading">Security Passcode</h2>
+            <p class="pin-subheading">
+              Masukkan kode rahasia untuk membuka akses kado
+            </p>
           </div>
-          <h2 class="pin-heading">Security Passcode</h2>
-          <p class="pin-subheading">Masukkan kode rahasia untuk membuka akses kado</p>
+
+          <!-- 4-PIN Indicators -->
+          <div class="pin-code-dots" id="pinDotsWrapper">
+            <div class="pin-dot"></div>
+            <div class="pin-dot"></div>
+            <div class="pin-dot"></div>
+            <div class="pin-dot"></div>
+          </div>
+
+          <!-- Modern Hint Pill -->
+          <div class="pin-hint-pill">
+            <div class="hint-icon-wrap">
+              <i data-lucide="key-round"></i>
+            </div>
+            <div class="hint-content">
+              <span class="hint-title">Petunjuk PIN</span>
+              <p class="hint-description" id="pinHintDisplay">
+                Format: <strong>DDMM</strong> (Tanggal &amp; bulan lahir kamu,
+                contoh: 12 Desember = <strong>1212</strong>)
+              </p>
+            </div>
+          </div>
+
+          <!-- Minimalist Tactile Keypad -->
+          <div class="tactile-numpad">
+            <button class="numpad-key" data-key="1">
+              <span class="num">1</span>
+              <span class="letters">&nbsp;</span>
+            </button>
+            <button class="numpad-key" data-key="2">
+              <span class="num">2</span>
+              <span class="letters">ABC</span>
+            </button>
+            <button class="numpad-key" data-key="3">
+              <span class="num">3</span>
+              <span class="letters">DEF</span>
+            </button>
+
+            <button class="numpad-key" data-key="4">
+              <span class="num">4</span>
+              <span class="letters">GHI</span>
+            </button>
+            <button class="numpad-key" data-key="5">
+              <span class="num">5</span>
+              <span class="letters">JKL</span>
+            </button>
+            <button class="numpad-key" data-key="6">
+              <span class="num">6</span>
+              <span class="letters">MNO</span>
+            </button>
+
+            <button class="numpad-key" data-key="7">
+              <span class="num">7</span>
+              <span class="letters">PQRS</span>
+            </button>
+            <button class="numpad-key" data-key="8">
+              <span class="num">8</span>
+              <span class="letters">TUV</span>
+            </button>
+            <button class="numpad-key" data-key="9">
+              <span class="num">9</span>
+              <span class="letters">WXYZ</span>
+            </button>
+
+            <button class="numpad-key action-key" id="keyClear">
+              <span class="action-label">CLEAR</span>
+            </button>
+            <button class="numpad-key" data-key="0">
+              <span class="num">0</span>
+              <span class="letters">+</span>
+            </button>
+            <button class="numpad-key action-key" id="keyBackspace">
+              <i data-lucide="delete"></i>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==============================================
+         SCENE 3: RETRO CAMERA VIEWFINDER & REEL
+         ============================================== -->
+      <section id="scene-camera" class="scene">
+        <div class="camera-scene-wrapper">
+          <!-- Story-style Segmented Progress Bar -->
+          <div class="story-segments-bar" id="storySegmentsBar">
+            <!-- Dynamically injected bars -->
+          </div>
+
+          <!-- Authentic Canon Vintage Digital Camera Unit -->
+          <div class="vintage-camera-unit">
+            <!-- Inner LCD Viewfinder Screen -->
+            <div class="viewfinder-lens" id="viewfinderLens">
+              <!-- Screen Top HUD OSD -->
+              <div class="lcd-osd-hud">
+                <div class="cam-badge-red">
+                  <span class="hud-rec-dot"></span>
+                  <span>REC</span>
+                  <span class="hud-timer" id="recTimer">00:24</span>
+                </div>
+                <div class="osd-mid-specs">
+                  <span class="hud-spec">1/125s</span>
+                  <span class="hud-spec">F2.8</span>
+                </div>
+                <div class="cam-film-tag">
+                  <span id="filmSimTag">CHROME</span>
+                </div>
+              </div>
+
+              <!-- Focus Reticle & Crosshairs -->
+              <div class="grid-crosshairs">
+                <div class="bracket b-top-l"></div>
+                <div class="bracket b-top-r"></div>
+                <div class="bracket b-bot-l"></div>
+                <div class="bracket b-bot-r"></div>
+                <div class="center-focus-reticle">
+                  <span class="reticle-box"></span>
+                </div>
+              </div>
+
+              <!-- Vintage Film Date Stamp in Orange LCD font -->
+              <div class="film-date-stamp" id="filmDateStamp">'24 08 12</div>
+
+              <!-- Carousel Slides Track -->
+              <div class="camera-slides-container" id="carouselTrack">
+                <!-- Slides injected via JS -->
+              </div>
+
+              <!-- Camera Flash Overlay -->
+              <div class="camera-flash" id="cameraFlash"></div>
+
+              <!-- Tap Areas for Story Skip (Left / Right) -->
+              <div
+                class="tap-zone tap-left"
+                id="tapZoneLeft"
+                title="Slide Sebelumnya"
+              ></div>
+              <div
+                class="tap-zone tap-right"
+                id="tapZoneRight"
+                title="Slide Selanjutnya"
+              ></div>
+            </div>
+
+            <!-- Canon Digital Camera Chassis Overlay -->
+            <img
+              src="assets/camera_frame.png"
+              alt="Bodi kamera digital Canon"
+              class="camera-frame-overlay"
+              draggable="false"
+            />
+
+            <!-- Interactive Hotspot Buttons mapped to Physical Camera Controls -->
+            <button
+              class="cam-body-hotspot hotspot-shutter"
+              id="hotspotShutter"
+              title="Jepret Foto"
+              aria-label="Shutter"
+            ></button>
+            <button
+              class="cam-body-hotspot hotspot-zoom-w"
+              id="hotspotZoomW"
+              title="Foto Sebelumnya"
+              aria-label="Zoom Out / Prev"
+            ></button>
+            <button
+              class="cam-body-hotspot hotspot-zoom-t"
+              id="hotspotZoomT"
+              title="Foto Selanjutnya"
+              aria-label="Zoom In / Next"
+            ></button>
+            <button
+              class="cam-body-hotspot hotspot-dpad-left"
+              id="hotspotDpadLeft"
+              title="Foto Sebelumnya"
+              aria-label="D-Pad Kiri"
+            ></button>
+            <button
+              class="cam-body-hotspot hotspot-dpad-right"
+              id="hotspotDpadRight"
+              title="Foto Selanjutnya"
+              aria-label="D-Pad Kanan"
+            ></button>
+            <button
+              class="cam-body-hotspot hotspot-dpad-func"
+              id="hotspotDpadFunc"
+              title="Jepret Foto"
+              aria-label="FUNC/SET"
+            ></button>
+            <button
+              class="cam-body-hotspot hotspot-disp"
+              id="hotspotDisp"
+              title="Ganti Efek Filter"
+              aria-label="DISP"
+            ></button>
+            <button
+              class="cam-body-hotspot hotspot-menu"
+              id="hotspotMenu"
+              title="Buka Kado & Tiup Lilin"
+              aria-label="MENU"
+            ></button>
+          </div>
+
+          <!-- Film Simulation Selector Chips -->
+          <div class="film-sim-row">
+            <button class="sim-chip active" data-sim="chrome">
+              Classic Chrome
+            </button>
+            <button class="sim-chip" data-sim="portra">Kodak Portra</button>
+            <button class="sim-chip" data-sim="cinestill">
+              CineStill 800T
+            </button>
+            <button class="sim-chip" data-sim="monochrome">
+              Acros B&amp;W
+            </button>
+          </div>
+
+          <!-- Photo Caption & Metadata -->
+          <div class="photo-editorial-caption">
+            <div class="caption-counter-row">
+              <span class="reel-tag">CANON MEMORY ARCHIVE</span>
+              <span class="reel-count" id="photoCounter">1 / 5</span>
+            </div>
+          </div>
+
+          <!-- Camera Physical Controls Bar -->
+          <div class="cam-controls-deck">
+            <button
+              class="deck-btn"
+              id="camPrevBtn"
+              aria-label="Sebelumnya"
+              title="Foto Sebelumnya"
+            >
+              <i data-lucide="chevron-left"></i>
+            </button>
+
+            <!-- Shutter Button -->
+            <div class="shutter-housing">
+              <button
+                class="shutter-trigger"
+                id="shutterBtn"
+                title="Jepret Foto"
+              >
+                <div class="shutter-core">
+                  <i data-lucide="camera"></i>
+                </div>
+              </button>
+            </div>
+
+            <button
+              class="deck-btn"
+              id="camNextBtn"
+              aria-label="Selanjutnya"
+              title="Foto Selanjutnya"
+            >
+              <i data-lucide="chevron-right"></i>
+            </button>
+          </div>
+
+          <!-- Next Step Button -->
+          <div class="cam-footer-action">
+            <button class="btn-editorial-main glow-gold" id="btnGoToCake">
+              <span>Tiup Lilin &amp; Buka Kado 🎂</span>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==============================================
+         SCENE 4: THE GRAND CELEBRATION (CAKE, SCRATCH CARD, WISHES)
+         ============================================== -->
+      <section id="scene-celebration" class="scene">
+        <div class="celebration-flow">
+          <!-- Grand Header -->
+          <header class="celebration-hero">
+            <span class="hero-kicker">A MILESTONE MOMENT</span>
+            <h2 class="hero-name" id="hbdCelebrantName">
+              Happy Birthday, Alya Putri!
+            </h2>
+            <p class="hero-sub" id="cakeInstruction">
+              Ketuk lilin untuk meniup &amp; memanjatkan permohonan 🕯️
+            </p>
+          </header>
+
+          <!-- 3D Layered Birthday Cake with Flickering Flame -->
+          <div class="cake-display-stage">
+            <div class="cake-assembly" id="cakeWrapper">
+              <!-- Candles Array -->
+              <div class="candles-deck" id="candlesRow">
+                <div class="candle" data-candle="1">
+                  <div class="flame lit">
+                    <div class="flame-core"></div>
+                  </div>
+                  <div class="candle-wick"></div>
+                  <div class="candle-body candle-pattern-1"></div>
+                </div>
+                <div class="candle" data-candle="2">
+                  <div class="flame lit">
+                    <div class="flame-core"></div>
+                  </div>
+                  <div class="candle-wick"></div>
+                  <div class="candle-body candle-pattern-2"></div>
+                </div>
+                <div class="candle" data-candle="3">
+                  <div class="flame lit">
+                    <div class="flame-core"></div>
+                  </div>
+                  <div class="candle-wick"></div>
+                  <div class="candle-body candle-pattern-3"></div>
+                </div>
+              </div>
+
+              <!-- Cake Tiers -->
+              <div class="cake-tier tier-top">
+                <div class="tier-frosting">
+                  <span></span><span></span><span></span><span></span
+                  ><span></span>
+                </div>
+                <div class="tier-toppings">
+                  <span>🍓</span><span>🍒</span><span>🍓</span>
+                </div>
+              </div>
+
+              <div class="cake-tier tier-middle">
+                <div class="middle-ganache"></div>
+              </div>
+
+              <div class="cake-tier tier-bottom">
+                <div class="bottom-pearls"></div>
+              </div>
+
+              <div class="cake-ceramic-plate"></div>
+            </div>
+          </div>
+
+          <!-- Wish Confirmation Pill (After blowing) -->
+          <div class="wish-reveal-pill" id="wishRevealCard">
+            <div class="pill-text-content">
+              <h4>Lilin Telah Ditiup!</h4>
+              <p>
+                "Semoga setiap doa dan harapan baikmu lekas berpelukan dengan
+                kenyataan."
+              </p>
+            </div>
+          </div>
+
+          <!-- ==============================================
+             FEATURE: INTERACTIVE SCRATCH-OFF GIFT CARD
+             ============================================== -->
+          <div class="scratch-card-section">
+            <div class="section-badge-header">
+              <i data-lucide="ticket"></i>
+              <span>SCRATCH &amp; REVEAL VOUCHER</span>
+            </div>
+
+            <div class="scratch-container">
+              <div class="scratch-reward-layer" id="scratchRewardLayer">
+                <div class="reward-icon">🎁</div>
+                <h5 class="reward-title" id="rewardTitle">
+                  KUPON SPESIAL ULANG TAHUN
+                </h5>
+                <p class="reward-desc" id="rewardDesc">
+                  Traktir Makan Malam Bebas Pilih Tempat + 1 Hari Penuh Menuruti
+                  Keinginanmu! 🥂
+                </p>
+                <div class="reward-code-stamp">NO. HBD-2026-SPECIAL</div>
+              </div>
+              <!-- Canvas Overlay for Scratching -->
+              <canvas
+                id="scratchCanvas"
+                class="scratch-canvas"
+                width="340"
+                height="150"
+              ></canvas>
+            </div>
+            <p class="scratch-hint-text">
+              👆
+              <em
+                >Gosok layar di atas dengan jarimu untuk membuka hadiah
+                rahasia!</em
+              >
+            </p>
+          </div>
+
+          <!-- ==============================================
+             FEATURE: SHOOTING STAR WISH CAPSULE
+             ============================================== -->
+          <div class="wish-capsule-section">
+            <div class="section-badge-header">
+              <i data-lucide="star"></i>
+              <span>KIRIM HARAPAN KE BINTANG</span>
+            </div>
+            <div class="wish-input-card">
+              <textarea
+                id="userWishInput"
+                placeholder="Tuliskan harapan terbesarmu di usia baru ini..."
+                rows="2"
+              ></textarea>
+              <button id="btnSendWish" class="btn-subtle-action">
+                <span>Lepaskan ke Semesta 🌌</span>
+                <i data-lucide="send"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- ==============================================
+             FEATURE: WAX-SEALED LOVE LETTER
+             ============================================== -->
+          <div class="love-letter-section">
+            <div class="section-badge-header">
+              <i data-lucide="mail"></i>
+              <span>SURAT SPESIAL UNTUKMU</span>
+            </div>
+
+            <div
+              class="wax-envelope-wrap"
+              id="envelopeWrap"
+              title="Klik untuk Membaca Surat"
+            >
+              <div class="env-flap"></div>
+              <div class="env-seal-wax">
+                <span>💌</span>
+              </div>
+              <div class="env-front-label">
+                <p class="to-label" id="envToLabel">Untuk: Alya Putri</p>
+                <p class="action-label">Ketuk untuk Buka &amp; Baca Surat</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- ==============================================
+             FEATURE: FLOATING BALLOON POPPING
+             ============================================== -->
+          <div class="balloons-pop-section">
+            <div class="section-badge-header">
+              <i data-lucide="party-popper"></i>
+              <span>PECAHKAN BALON BERKAH</span>
+            </div>
+            <div class="balloon-parade" id="balloonCluster">
+              <!-- Dynamic Balloons -->
+            </div>
+          </div>
+
+          <!-- Bottom Spacer so content is never hidden behind floating player -->
+          <div style="height: 100px"></div>
+        </div>
+      </section>
+
+      <footer class="app-footer">
+        <span>Dibuat dengan</span>
+        <i data-lucide="heart" aria-hidden="true"></i>
+        <span>oleh Ahmad Zaeladi</span>
+      </footer>
+    </main>
+    <!-- /mobile-canvas -->
+
+    <!-- ==============================================
+       MODAL: EDITORIAL HANDWRITTEN LOVE LETTER
+       ============================================== -->
+    <div class="modal-backdrop" id="letterModal">
+      <div class="letter-sheet-card">
+        <button
+          class="sheet-close-btn"
+          id="closeLetterBtn"
+          aria-label="Tutup Surat"
+        >
+          <i data-lucide="x"></i>
+        </button>
+
+        <div class="sheet-top-stamp">
+          <span class="stamp-post">CONFIDENTIAL &bull; BIRTHDAY EDITION</span>
+          <span class="stamp-seal">SPECIAL WISH</span>
         </div>
 
-        <!-- 4-PIN Indicators -->
-        <div class="pin-code-dots" id="pinDotsWrapper">
-          <div class="pin-dot"></div>
-          <div class="pin-dot"></div>
-          <div class="pin-dot"></div>
-          <div class="pin-dot"></div>
-        </div>
-
-        <!-- Modern Hint Pill -->
-        <div class="pin-hint-pill">
-          <div class="hint-icon-wrap">
-            <i data-lucide="key-round"></i>
+        <div class="sheet-scroll-body">
+          <div class="letter-date-heading" id="letterDateToday">
+            12 Desember 2026
           </div>
-          <div class="hint-content">
-            <span class="hint-title">Petunjuk PIN</span>
-            <p class="hint-description" id="pinHintDisplay">
-              Format: <strong>DDMM</strong> (Tanggal &amp; bulan lahir kamu, contoh: 12 Agustus = <strong>1208</strong>)
+          <h3 class="letter-recipient-title" id="letterToName">
+            Untuk Alya Putri yang Sangat Istimewa,
+          </h3>
+
+          <div class="letter-handwritten-text" id="letterBodyText">
+            <!-- Text printed with typewriter effect -->
+          </div>
+
+          <div class="letter-salutation">
+            <p class="salutation-pre">
+              Dengan seluruh rasa sayang dan doa terbaik,
+            </p>
+            <p class="salutation-name" id="letterFromName">
+              Dari Seseorang yang Selalu Mengagumimu
             </p>
           </div>
         </div>
-
-        <!-- Minimalist Tactile Keypad -->
-        <div class="tactile-numpad">
-          <button class="numpad-key" data-key="1">
-            <span class="num">1</span>
-            <span class="letters">&nbsp;</span>
-          </button>
-          <button class="numpad-key" data-key="2">
-            <span class="num">2</span>
-            <span class="letters">ABC</span>
-          </button>
-          <button class="numpad-key" data-key="3">
-            <span class="num">3</span>
-            <span class="letters">DEF</span>
-          </button>
-
-          <button class="numpad-key" data-key="4">
-            <span class="num">4</span>
-            <span class="letters">GHI</span>
-          </button>
-          <button class="numpad-key" data-key="5">
-            <span class="num">5</span>
-            <span class="letters">JKL</span>
-          </button>
-          <button class="numpad-key" data-key="6">
-            <span class="num">6</span>
-            <span class="letters">MNO</span>
-          </button>
-
-          <button class="numpad-key" data-key="7">
-            <span class="num">7</span>
-            <span class="letters">PQRS</span>
-          </button>
-          <button class="numpad-key" data-key="8">
-            <span class="num">8</span>
-            <span class="letters">TUV</span>
-          </button>
-          <button class="numpad-key" data-key="9">
-            <span class="num">9</span>
-            <span class="letters">WXYZ</span>
-          </button>
-
-          <button class="numpad-key action-key" id="keyClear">
-            <span class="action-label">CLEAR</span>
-          </button>
-          <button class="numpad-key" data-key="0">
-            <span class="num">0</span>
-            <span class="letters">+</span>
-          </button>
-          <button class="numpad-key action-key" id="keyBackspace">
-            <i data-lucide="delete"></i>
-          </button>
-        </div>
-      </div>
-    </section>
-
-    <!-- ==============================================
-         SCENE 3: RETRO CAMERA VIEWFINDER & REEL
-         ============================================== -->
-    <section id="scene-camera" class="scene">
-      <div class="fuji-cam-frame">
-
-        <!-- Story-style Segmented Progress Bar -->
-        <div class="story-segments-bar" id="storySegmentsBar">
-          <!-- Dynamically injected bars -->
-        </div>
-
-        <!-- Camera Top HUD -->
-        <div class="cam-top-hud">
-          <div class="cam-badge-red">
-            <span class="hud-rec-dot"></span>
-            <span>REC</span>
-            <span class="hud-timer" id="recTimer">00:24</span>
-          </div>
-
-          <div class="cam-spec-info">
-            <span class="cam-spec">1/125s</span>
-            <span class="cam-spec">F2.8</span>
-            <span class="cam-spec">ISO 400</span>
-          </div>
-
-          <div class="cam-film-tag">
-            <i data-lucide="film"></i>
-            <span id="filmSimTag">CHROME</span>
-          </div>
-        </div>
-
-        <!-- Viewfinder Screen -->
-        <div class="viewfinder-lens" id="viewfinderLens">
-          <!-- Camera Grid & Crosshairs -->
-          <div class="grid-crosshairs">
-            <div class="bracket b-top-l"></div>
-            <div class="bracket b-top-r"></div>
-            <div class="bracket b-bot-l"></div>
-            <div class="bracket b-bot-r"></div>
-            <div class="center-focus-reticle">
-              <span class="reticle-box"></span>
-            </div>
-          </div>
-
-          <!-- Vintage Film Date Stamp in Orange LCD font -->
-          <div class="film-date-stamp" id="filmDateStamp">'24 08 12</div>
-
-          <!-- Carousel Slides Track -->
-          <div class="camera-slides-container" id="carouselTrack">
-            <!-- Slides injected via JS -->
-          </div>
-
-          <!-- Camera Flash Overlay -->
-          <div class="camera-flash" id="cameraFlash"></div>
-
-          <!-- Tap Areas for Story Skip (Left / Right) -->
-          <div class="tap-zone tap-left" id="tapZoneLeft" title="Slide Sebelumnya"></div>
-          <div class="tap-zone tap-right" id="tapZoneRight" title="Slide Selanjutnya"></div>
-        </div>
-
-        <!-- Film Simulation Selector Chips -->
-        <div class="film-sim-row">
-          <button class="sim-chip active" data-sim="chrome">Classic Chrome</button>
-          <button class="sim-chip" data-sim="portra">Kodak Portra</button>
-          <button class="sim-chip" data-sim="cinestill">CineStill 800T</button>
-          <button class="sim-chip" data-sim="monochrome">Acros B&amp;W</button>
-        </div>
-
-        <!-- Photo Caption & Metadata -->
-        <div class="photo-editorial-caption">
-          <div class="caption-counter-row">
-            <span class="reel-tag">MEMORY ARCHIVE</span>
-            <span class="reel-count" id="photoCounter">1 / 5</span>
-          </div>
-          <p class="caption-text" id="slideCaption">
-            "Momen senyum paling manis yang selalu bikin hari-hari jadi lebih indah..."
-          </p>
-        </div>
-
-        <!-- Camera Physical Controls Bar -->
-        <div class="cam-controls-deck">
-          <button class="deck-btn" id="camPrevBtn" aria-label="Sebelumnya">
-            <i data-lucide="chevron-left"></i>
-          </button>
-
-          <!-- Leica / Fuji Style Shutter Button -->
-          <div class="shutter-housing">
-            <button class="shutter-trigger" id="shutterBtn" title="Jepret Foto">
-              <div class="shutter-core">
-                <i data-lucide="aperture"></i>
-              </div>
-            </button>
-          </div>
-
-          <button class="deck-btn" id="camNextBtn" aria-label="Selanjutnya">
-            <i data-lucide="chevron-right"></i>
-          </button>
-        </div>
-
-        <!-- Floating Reactions Bar (Instagram / TikTok Live style) -->
-        <div class="floating-reactions-bar">
-          <span class="reaction-label">Kirim Cinta:</span>
-          <div class="reactions-list">
-            <button class="reaction-bubble" data-emoji="❤️">❤️</button>
-            <button class="reaction-bubble" data-emoji="✨">✨</button>
-            <button class="reaction-bubble" data-emoji="🎂">🎂</button>
-            <button class="reaction-bubble" data-emoji="🥂">🥂</button>
-            <button class="reaction-bubble" data-emoji="🥺">🥺</button>
-          </div>
-        </div>
-
-        <!-- Next Step Button -->
-        <div class="cam-footer-action">
-          <button class="btn-editorial-main glow-gold" id="btnGoToCake">
-            <span>Tiup Lilin &amp; Buka Kado 🎂</span>
-            <i data-lucide="sparkles"></i>
-          </button>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- ==============================================
-         SCENE 4: THE GRAND CELEBRATION (CAKE, SCRATCH CARD, WISHES)
-         ============================================== -->
-    <section id="scene-celebration" class="scene">
-      <div class="celebration-flow">
-
-        <!-- Grand Header -->
-        <header class="celebration-hero">
-          <span class="hero-kicker">A MILESTONE MOMENT</span>
-          <h2 class="hero-name" id="hbdCelebrantName">Happy Birthday, Alya Putri!</h2>
-          <p class="hero-sub" id="cakeInstruction">
-            Ketuk lilin untuk meniup &amp; memanjatkan permohonan 🕯️
-          </p>
-        </header>
-
-        <!-- 3D Layered Birthday Cake with Flickering Flame -->
-        <div class="cake-display-stage">
-          <div class="cake-assembly" id="cakeWrapper">
-            <!-- Candles Array -->
-            <div class="candles-deck" id="candlesRow">
-              <div class="candle" data-candle="1">
-                <div class="flame lit">
-                  <div class="flame-core"></div>
-                </div>
-                <div class="candle-wick"></div>
-                <div class="candle-body candle-pattern-1"></div>
-              </div>
-              <div class="candle" data-candle="2">
-                <div class="flame lit">
-                  <div class="flame-core"></div>
-                </div>
-                <div class="candle-wick"></div>
-                <div class="candle-body candle-pattern-2"></div>
-              </div>
-              <div class="candle" data-candle="3">
-                <div class="flame lit">
-                  <div class="flame-core"></div>
-                </div>
-                <div class="candle-wick"></div>
-                <div class="candle-body candle-pattern-3"></div>
-              </div>
-            </div>
-
-            <!-- Cake Tiers -->
-            <div class="cake-tier tier-top">
-              <div class="tier-frosting">
-                <span></span><span></span><span></span><span></span><span></span>
-              </div>
-              <div class="tier-toppings">
-                <span>🍓</span><span>🍒</span><span>🍓</span>
-              </div>
-            </div>
-
-            <div class="cake-tier tier-middle">
-              <div class="middle-ganache"></div>
-            </div>
-
-            <div class="cake-tier tier-bottom">
-              <div class="bottom-pearls"></div>
-            </div>
-
-            <div class="cake-ceramic-plate"></div>
-          </div>
-        </div>
-
-        <!-- Wish Confirmation Pill (After blowing) -->
-        <div class="wish-reveal-pill" id="wishRevealCard">
-          <div class="pill-sparkle-icon">✨</div>
-          <div class="pill-text-content">
-            <h4>Lilin Telah Ditiup!</h4>
-            <p>"Semoga setiap doa dan harapan baikmu lekas berpelukan dengan kenyataan."</p>
-          </div>
-        </div>
-
-        <!-- ==============================================
-             FEATURE: INTERACTIVE SCRATCH-OFF GIFT CARD
-             ============================================== -->
-        <div class="scratch-card-section">
-          <div class="section-badge-header">
-            <i data-lucide="ticket"></i>
-            <span>SCRATCH &amp; REVEAL VOUCHER</span>
-          </div>
-
-          <div class="scratch-container">
-            <div class="scratch-reward-layer" id="scratchRewardLayer">
-              <div class="reward-icon">🎁</div>
-              <h5 class="reward-title" id="rewardTitle">KUPON SPESIAL ULANG TAHUN</h5>
-              <p class="reward-desc" id="rewardDesc">
-                Traktir Makan Malam Bebas Pilih Tempat + 1 Hari Penuh Menuruti Keinginanmu! 🥂✨
-              </p>
-              <div class="reward-code-stamp">NO. HBD-2026-SPECIAL</div>
-            </div>
-            <!-- Canvas Overlay for Scratching -->
-            <canvas id="scratchCanvas" class="scratch-canvas" width="340" height="150"></canvas>
-          </div>
-          <p class="scratch-hint-text">
-            👆 <em>Gosok layar di atas dengan jarimu untuk membuka hadiah rahasia!</em>
-          </p>
-        </div>
-
-        <!-- ==============================================
-             FEATURE: SHOOTING STAR WISH CAPSULE
-             ============================================== -->
-        <div class="wish-capsule-section">
-          <div class="section-badge-header">
-            <i data-lucide="star"></i>
-            <span>KIRIM HARAPAN KE BINTANG</span>
-          </div>
-          <div class="wish-input-card">
-            <textarea id="userWishInput" placeholder="Tuliskan harapan terbesarmu di usia baru ini..."
-              rows="2"></textarea>
-            <button id="btnSendWish" class="btn-subtle-action">
-              <span>Lepaskan ke Semesta 🌌</span>
-              <i data-lucide="send"></i>
-            </button>
-          </div>
-        </div>
-
-        <!-- ==============================================
-             FEATURE: WAX-SEALED LOVE LETTER
-             ============================================== -->
-        <div class="love-letter-section">
-          <div class="section-badge-header">
-            <i data-lucide="mail"></i>
-            <span>SURAT SPESIAL UNTUKMU</span>
-          </div>
-
-          <div class="wax-envelope-wrap" id="envelopeWrap" title="Klik untuk Membaca Surat">
-            <div class="env-flap"></div>
-            <div class="env-seal-wax">
-              <span>💌</span>
-            </div>
-            <div class="env-front-label">
-              <p class="to-label" id="envToLabel">Untuk: Alya Putri</p>
-              <p class="action-label">Ketuk untuk Buka &amp; Baca Surat</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- ==============================================
-             FEATURE: FLOATING BALLOON POPPING
-             ============================================== -->
-        <div class="balloons-pop-section">
-          <div class="section-badge-header">
-            <i data-lucide="party-popper"></i>
-            <span>PECAHKAN BALON BERKAH</span>
-          </div>
-          <div class="balloon-parade" id="balloonCluster">
-            <!-- Dynamic Balloons -->
-          </div>
-        </div>
-
-        <!-- Bottom Spacer so content is never hidden behind floating player -->
-        <div style="height: 100px;"></div>
-
-      </div>
-    </section>
-
-  </main><!-- /mobile-canvas -->
-
-  <!-- ==============================================
-       MODAL: EDITORIAL HANDWRITTEN LOVE LETTER
-       ============================================== -->
-  <div class="modal-backdrop" id="letterModal">
-    <div class="letter-sheet-card">
-      <button class="sheet-close-btn" id="closeLetterBtn" aria-label="Tutup Surat">
-        <i data-lucide="x"></i>
-      </button>
-
-      <div class="sheet-top-stamp">
-        <span class="stamp-post">CONFIDENTIAL &bull; BIRTHDAY EDITION</span>
-        <span class="stamp-seal">SPECIAL WISH</span>
-      </div>
-
-      <div class="sheet-scroll-body">
-        <div class="letter-date-heading" id="letterDateToday">29 September 2026</div>
-        <h3 class="letter-recipient-title" id="letterToName">Untuk Alya Putri yang Sangat Istimewa,</h3>
-
-        <div class="letter-handwritten-text" id="letterBodyText">
-          <!-- Text printed with typewriter effect -->
-        </div>
-
-        <div class="letter-salutation">
-          <p class="salutation-pre">Dengan seluruh rasa sayang dan doa terbaik,</p>
-          <p class="salutation-name" id="letterFromName">Dari Seseorang yang Selalu Mengagumimu ✨</p>
-        </div>
-      </div>
-
-      <div class="sheet-footer-actions">
-        <button class="btn-sheet-secondary" id="replayCelebrationBtn">
-          <i data-lucide="sparkles"></i>
-          <span>Ledakkan Konfeti 🎉</span>
-        </button>
-        <button class="btn-sheet-primary" id="shareWishBtn">
-          <i data-lucide="share-2"></i>
-          <span>Bagikan ke WhatsApp</span>
-        </button>
       </div>
     </div>
-  </div>
 
-  <!-- ==============================================
-       MODAL: INTUITIVE CUSTOMIZER DRAWER
-       ============================================== -->
-  <div class="modal-backdrop" id="settingsModal">
-    <div class="settings-drawer-card">
-      <div class="drawer-header">
-        <div class="drawer-title-wrap">
-          <i data-lucide="sliders"></i>
-          <div>
-            <h3>Kustomisasi Template</h3>
-            <p>Ubah nama, PIN rahasia, lagu, foto, dan isi kado</p>
-          </div>
-        </div>
-        <button class="sheet-close-btn" id="closeSettingsBtn" aria-label="Tutup">
-          <i data-lucide="x"></i>
-        </button>
-      </div>
+    <!-- Reactions Floating Canvas -->
+    <div id="reactionsOverlay" class="reactions-overlay-layer"></div>
 
-      <div class="drawer-form-scroll">
-        <div class="form-field">
-          <label for="inputName">Nama Yang Berulang Tahun</label>
-          <input type="text" id="inputName" placeholder="Contoh: Alya Putri" value="Alya Putri">
-        </div>
-
-        <div class="form-field">
-          <label for="inputPin">PIN Rahasia (4 Digit)</label>
-          <input type="text" id="inputPin" maxlength="4" placeholder="Contoh: 1208" value="1208">
-          <span class="field-help">Default 1208 (tanggal 12 bulan 08)</span>
-        </div>
-
-        <div class="form-field">
-          <label for="inputHint">Teks Petunjuk PIN (Hint)</label>
-          <input type="text" id="inputHint" placeholder="Contoh: Format DDMM tanggal & bulan lahir kamu"
-            value="Format: DDMM (Tanggal &amp; bulan lahir kamu, contoh: 12 Agustus = 1208)">
-        </div>
-
-        <div class="form-field">
-          <label for="inputSender">Nama Pengirim / Pembuat</label>
-          <input type="text" id="inputSender" placeholder="Contoh: Dari Sahabat Terbaikmu"
-            value="Dari Seseorang yang Selalu Mengagumimu ✨">
-        </div>
-
-        <div class="form-field">
-          <label for="inputReward">Hadiah Kupon Gosok (Scratch Voucher)</label>
-          <input type="text" id="inputReward" placeholder="Contoh: Traktir Makan Bebas Pilih Tempat!"
-            value="Traktir Makan Malam Bebas Pilih Tempat + 1 Hari Penuh Menuruti Keinginanmu! 🥂✨">
-        </div>
-
-        <div class="form-field">
-          <label for="inputLetter">Isi Surat / Pesan Doa Tulus</label>
-          <textarea id="inputLetter" rows="6" placeholder="Tuliskan ucapan dan doa tulus kamu...">Selamat bertambah usia yang manis! 🎂✨
-
-Di usiamu yang baru ini, aku berdoa semoga setiap langkah yang kamu tapaki selalu dilimpahi keberkahan, rezeki yang tak pernah putus, dan hati yang senantiasa tenang serta bahagia.
-
-Terima kasih sudah terlahir ke dunia dan menjadi sosok yang begitu luar biasa. Senyumanmu selalu mampu menghadirkan kehangatan bagi orang-orang di sekitarmu.
-
-Semoga semua impian dan cita-cita besarmu diijabah satu per satu oleh Tuhan Yang Maha Baik. Tetaplah menjadi versi dirimu yang ceria, tangguh, dan memesona.
-
-Selamat menikmati hari istimewamu! 💖</textarea>
-        </div>
-
-        <!-- Custom Photos Upload -->
-        <div class="form-field">
-          <label>Unggah Foto Memori Sendiri (Maksimal 5 Foto)</label>
-          <input type="file" id="inputCustomFiles" accept="image/*" multiple class="file-styled-input">
-          <span class="field-help">Foto langsung tersimpan di memori browser perangkat ini secara aman.</span>
-          <button type="button" class="btn-sheet-secondary btn-sm" id="btnResetDefaultPhotos">
-            <i data-lucide="rotate-ccw"></i>
-            <span>Kembalikan Foto Bawaan</span>
-          </button>
-        </div>
-      </div>
-
-      <div class="drawer-footer">
-        <button class="btn-editorial-main" id="btnSaveSettings">
-          <i data-lucide="check"></i>
-          <span>Simpan &amp; Terapkan Perubahan</span>
-        </button>
-      </div>
-    </div>
-  </div>
-
-  <!-- Reactions Floating Canvas -->
-  <div id="reactionsOverlay" class="reactions-overlay-layer"></div>
-
-  <script src="app.js"></script>
-</body>
-
+    <script src="app.js"></script>
+  </body>
 </html>

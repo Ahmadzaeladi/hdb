@@ -2,7 +2,7 @@
    MODERN BIRTHDAY INTERACTIVE EXPERIENCE - CORE APPLICATION LOGIC
    =================================================================== */
 
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener("DOMContentLoaded", () => {
   // Initialize Lucide Icons
   if (window.lucide) {
     window.lucide.createIcons();
@@ -13,53 +13,60 @@ document.addEventListener('DOMContentLoaded', () => {
      --------------------------------------------------------- */
   const defaultPhotos = [
     {
-      url: 'https://images.unsplash.com/photo-1513151233558-d860c5398176?auto=format&fit=crop&w=800&q=80',
+      url: "assets/foto1.jpeg",
       date: "'24 08 12",
-      caption: '"Hari di mana senyummu menjadi pemandangan paling menenangkan di dunia..."'
+      caption:
+        '"Hari di mana senyummu menjadi pemandangan paling menenangkan di dunia..."',
     },
     {
-      url: 'https://images.unsplash.com/photo-1527529482837-4698179dc6ce?auto=format&fit=crop&w=800&q=80',
+      url: "https://images.unsplash.com/photo-1527529482837-4698179dc6ce?auto=format&fit=crop&w=800&q=80",
       date: "'24 11 05",
-      caption: '"Tawa lepas yang nggak pernah gagal menghangatkan setiap suasana."'
+      caption:
+        '"Tawa lepas yang nggak pernah gagal menghangatkan setiap suasana."',
     },
     {
-      url: 'https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=800&q=80',
+      url: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=800&q=80",
       date: "'25 01 01",
-      caption: '"Menyambut tahun baru dengan harapan-harapan indah bersamamu."'
+      caption: '"Menyambut tahun baru dengan harapan-harapan indah bersamamu."',
     },
     {
-      url: 'https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=800&q=80',
+      url: "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=800&q=80",
       date: "'25 05 20",
-      caption: '"Momen sederhana yang selalu meninggalkan rasa syukur mendalam."'
+      caption:
+        '"Momen sederhana yang selalu meninggalkan rasa syukur mendalam."',
     },
     {
-      url: 'https://images.unsplash.com/photo-1464349095431-e9a21285b5f3?auto=format&fit=crop&w=800&q=80',
+      url: "https://images.unsplash.com/photo-1464349095431-e9a21285b5f3?auto=format&fit=crop&w=800&q=80",
       date: "'26 09 29",
-      caption: '"Selamat merayakan usia yang baru! Semoga makin bersinar dan bahagia selalu! ✨"'
-    }
+      caption:
+        '"Selamat merayakan usia yang baru! Semoga makin bersinar dan bahagia selalu! "',
+    },
   ];
 
   let config = {
-    name: 'Alya Putri',
-    pin: '1208',
-    hint: 'Format: <strong>DDMM</strong> (Tanggal &amp; bulan lahir kamu, contoh: 12 Agustus = <strong>1208</strong>)',
-    sender: 'Dari Seseorang yang Selalu Mengagumimu ✨',
-    reward: 'Traktir Makan Malam Bebas Pilih Tempat + 1 Hari Penuh Menuruti Keinginanmu! 🥂✨',
-    letter: `Selamat bertambah usia yang manis! 🎂✨
-
-Di usiamu yang baru ini, aku berdoa semoga setiap langkah yang kamu tapaki selalu dilimpahi keberkahan, rezeki yang tak pernah putus, dan hati yang senantiasa tenang serta bahagia.
-
-Terima kasih sudah terlahir ke dunia dan menjadi sosok yang begitu luar biasa. Senyumanmu selalu mampu menghadirkan kehangatan bagi orang-orang di sekitarmu.
-
-Semoga semua impian dan cita-cita besarmu diijabah satu per satu oleh Tuhan Yang Maha Baik. Tetaplah menjadi versi dirimu yang ceria, tangguh, dan memesona.
-
-Selamat menikmati hari istimewamu! 💖`,
-    photos: defaultPhotos
+    name: "Naira",
+    pin: "1212",
+    hint: "Format: <strong>DDMM</strong> (Tanggal &amp; bulan lahir kamu, contoh: 12 Desember = <strong>1212</strong>)",
+    sender: "Dari Seseorang temanmu yang selalu mendoakanmu.",
+    letter: `Kalau lu baca surat ini. Brarti gw udah berhasil ngasih kado buat lu nai. 
+    
+    Gw gk tau bagaimana cara ngucapin ulang tahun dengan baik dan benar. Gw gk tau apakah gw ngasih kado ini etis atau tidak. Mungkin ini terkesan berlebihan.
+    
+    "Selamat Ulang Tahun Ya". Semoga lu selalu sehat, bahagia, dan sukses dalam segala hal. Gw berharap, kita bisa terus bareng-bareng. 
+    
+    Mungkin kado ini gk seberapa buat lu nai. Tapi ini kado yang terbaik yang bisa gw kasih buat lu. Semoga lu suka ya nai.
+    
+    Disclaimer nai: "Mungkin ini sangat beresiko. tapi ini harus gw sampaikan, karena gw gk mau memendam apapun dan gw gk ada ekpektasi apapun". 
+    
+    Bagi gw lu tuh spesial. Ya lu tau lah maksud gw kenapa lu spesial. Tapi tenang aja nai, gw gk bakal ngejar lu. Gw juga gk mau perasaan ini mengganggu dan memberatkan lu nai. Masih banyak hal yang harus gw selesaikan sebelum gw ngejar cinta nai. lagi pula gw sadar banyak laki-laki lain yang lebih baik dari gw. Sebagai teman sudah lebih dari cukup nai. Gw gk tau setelah lu baca ini apakah lu akan ngejauh dari gw atau gk. 
+    
+    Terakhir. terima kasih nai, karena lu udah jadi teman yang baik buat gw. Gw gk tau gimana cara ngucapin ini. Tapi gw mau bilang "I Love You Nai". dan semoga lu bisa mendapatkan kebahagiaan yang lu mau.`,
+    photos: defaultPhotos,
   };
 
   // Load from local storage if available
   try {
-    const saved = localStorage.getItem('hbd_editorial_v2');
+    const saved = localStorage.getItem("hbd_editorial_v2");
     if (saved) {
       const parsed = JSON.parse(saved);
       config = { ...config, ...parsed };
@@ -68,17 +75,17 @@ Selamat menikmati hari istimewamu! 💖`,
       }
     }
   } catch (e) {
-    console.warn('Storage read error:', e);
+    console.warn("Storage read error:", e);
   }
 
   /* ---------------------------------------------------------
      AUTHENTIC AUDIO & SYNTHESIZED SOUND EFFECTS
      --------------------------------------------------------- */
-  const hbdAudio = document.getElementById('hbdAudio');
-  const quickSoundBtn = document.getElementById('quickSoundBtn');
-  const spotifyPlayer = document.getElementById('spotifyPlayer');
-  const playerProgressFill = document.getElementById('playerProgressFill');
-  const playerCelebrantTag = document.getElementById('playerCelebrantTag');
+  const hbdAudio = document.getElementById("hbdAudio");
+  const quickSoundBtn = document.getElementById("quickSoundBtn");
+  const spotifyPlayer = document.getElementById("spotifyPlayer");
+  const playerProgressFill = document.getElementById("playerProgressFill");
+  const playerCelebrantTag = document.getElementById("playerCelebrantTag");
 
   let isAudioPlaying = false;
   let audioContext = null;
@@ -90,7 +97,7 @@ Selamat menikmati hari istimewamu! 💖`,
         audioContext = new AudioCtx();
       }
     }
-    if (audioContext && audioContext.state === 'suspended') {
+    if (audioContext && audioContext.state === "suspended") {
       audioContext.resume();
     }
   }
@@ -102,10 +109,13 @@ Selamat menikmati hari istimewamu! 💖`,
     try {
       const osc = audioContext.createOscillator();
       const gain = audioContext.createGain();
-      osc.type = 'sine';
+      osc.type = "sine";
       osc.frequency.setValueAtTime(freq, audioContext.currentTime);
       gain.gain.setValueAtTime(0.06, audioContext.currentTime);
-      gain.gain.exponentialRampToValueAtTime(0.0001, audioContext.currentTime + 0.08);
+      gain.gain.exponentialRampToValueAtTime(
+        0.0001,
+        audioContext.currentTime + 0.08,
+      );
       osc.connect(gain);
       gain.connect(audioContext.destination);
       osc.start();
@@ -120,11 +130,17 @@ Selamat menikmati hari istimewamu! 💖`,
     try {
       const osc = audioContext.createOscillator();
       const gain = audioContext.createGain();
-      osc.type = 'square';
+      osc.type = "square";
       osc.frequency.setValueAtTime(1400, audioContext.currentTime);
-      osc.frequency.exponentialRampToValueAtTime(250, audioContext.currentTime + 0.09);
+      osc.frequency.exponentialRampToValueAtTime(
+        250,
+        audioContext.currentTime + 0.09,
+      );
       gain.gain.setValueAtTime(0.18, audioContext.currentTime);
-      gain.gain.exponentialRampToValueAtTime(0.001, audioContext.currentTime + 0.09);
+      gain.gain.exponentialRampToValueAtTime(
+        0.001,
+        audioContext.currentTime + 0.09,
+      );
       osc.connect(gain);
       gain.connect(audioContext.destination);
       osc.start();
@@ -135,11 +151,17 @@ Selamat menikmati hari istimewamu! 💖`,
         try {
           const osc2 = audioContext.createOscillator();
           const gain2 = audioContext.createGain();
-          osc2.type = 'sawtooth';
+          osc2.type = "sawtooth";
           osc2.frequency.setValueAtTime(320, audioContext.currentTime);
-          osc2.frequency.linearRampToValueAtTime(450, audioContext.currentTime + 0.14);
+          osc2.frequency.linearRampToValueAtTime(
+            450,
+            audioContext.currentTime + 0.14,
+          );
           gain2.gain.setValueAtTime(0.06, audioContext.currentTime);
-          gain2.gain.exponentialRampToValueAtTime(0.001, audioContext.currentTime + 0.15);
+          gain2.gain.exponentialRampToValueAtTime(
+            0.001,
+            audioContext.currentTime + 0.15,
+          );
           osc2.connect(gain2);
           gain2.connect(audioContext.destination);
           osc2.start();
@@ -155,7 +177,11 @@ Selamat menikmati hari istimewamu! 💖`,
     if (!audioContext) return;
     try {
       const bufferSize = audioContext.sampleRate * 0.35;
-      const buffer = audioContext.createBuffer(1, bufferSize, audioContext.sampleRate);
+      const buffer = audioContext.createBuffer(
+        1,
+        bufferSize,
+        audioContext.sampleRate,
+      );
       const data = buffer.getChannelData(0);
       for (let i = 0; i < bufferSize; i++) {
         data[i] = Math.random() * 2 - 1;
@@ -164,13 +190,16 @@ Selamat menikmati hari istimewamu! 💖`,
       noise.buffer = buffer;
 
       const filter = audioContext.createBiquadFilter();
-      filter.type = 'bandpass';
+      filter.type = "bandpass";
       filter.frequency.setValueAtTime(700, audioContext.currentTime);
       filter.Q.setValueAtTime(2.5, audioContext.currentTime);
 
       const gain = audioContext.createGain();
       gain.gain.setValueAtTime(0.16, audioContext.currentTime);
-      gain.gain.exponentialRampToValueAtTime(0.001, audioContext.currentTime + 0.32);
+      gain.gain.exponentialRampToValueAtTime(
+        0.001,
+        audioContext.currentTime + 0.32,
+      );
 
       noise.connect(filter);
       filter.connect(gain);
@@ -186,11 +215,17 @@ Selamat menikmati hari istimewamu! 💖`,
     try {
       const osc = audioContext.createOscillator();
       const gain = audioContext.createGain();
-      osc.type = 'sine';
+      osc.type = "sine";
       osc.frequency.setValueAtTime(900, audioContext.currentTime);
-      osc.frequency.exponentialRampToValueAtTime(100, audioContext.currentTime + 0.08);
+      osc.frequency.exponentialRampToValueAtTime(
+        100,
+        audioContext.currentTime + 0.08,
+      );
       gain.gain.setValueAtTime(0.25, audioContext.currentTime);
-      gain.gain.exponentialRampToValueAtTime(0.001, audioContext.currentTime + 0.08);
+      gain.gain.exponentialRampToValueAtTime(
+        0.001,
+        audioContext.currentTime + 0.08,
+      );
       osc.connect(gain);
       gain.connect(audioContext.destination);
       osc.start();
@@ -202,16 +237,19 @@ Selamat menikmati hari istimewamu! 💖`,
   function playUnlockFX() {
     initAudioCtx();
     if (!audioContext) return;
-    const chords = [523.25, 659.25, 783.99, 1046.50];
+    const chords = [523.25, 659.25, 783.99, 1046.5];
     chords.forEach((freq, idx) => {
       setTimeout(() => {
         try {
           const osc = audioContext.createOscillator();
           const gain = audioContext.createGain();
-          osc.type = 'triangle';
+          osc.type = "triangle";
           osc.frequency.setValueAtTime(freq, audioContext.currentTime);
           gain.gain.setValueAtTime(0.12, audioContext.currentTime);
-          gain.gain.exponentialRampToValueAtTime(0.0001, audioContext.currentTime + 0.4);
+          gain.gain.exponentialRampToValueAtTime(
+            0.0001,
+            audioContext.currentTime + 0.4,
+          );
           osc.connect(gain);
           gain.connect(audioContext.destination);
           osc.start();
@@ -224,12 +262,15 @@ Selamat menikmati hari istimewamu! 💖`,
   // Audio Playback Controller
   function playGenuineAudio() {
     if (!hbdAudio) return;
-    hbdAudio.play().then(() => {
-      isAudioPlaying = true;
-      updateAudioUIState();
-    }).catch(err => {
-      console.log('Audio autoplay prevented, awaiting user click:', err);
-    });
+    hbdAudio
+      .play()
+      .then(() => {
+        isAudioPlaying = true;
+        updateAudioUIState();
+      })
+      .catch((err) => {
+        console.log("Audio autoplay prevented, awaiting user click:", err);
+      });
   }
 
   function pauseGenuineAudio() {
@@ -249,40 +290,43 @@ Selamat menikmati hari istimewamu! 💖`,
 
   function updateAudioUIState() {
     if (quickSoundBtn) {
-      quickSoundBtn.classList.toggle('playing', isAudioPlaying);
+      quickSoundBtn.classList.toggle("playing", isAudioPlaying);
     }
     // Show/hide the mini player bar based on playing state
     if (spotifyPlayer) {
-      spotifyPlayer.classList.toggle('playing', isAudioPlaying);
+      spotifyPlayer.classList.toggle("playing", isAudioPlaying);
     }
   }
 
-  if (quickSoundBtn) quickSoundBtn.addEventListener('click', toggleAudio);
+  if (quickSoundBtn) quickSoundBtn.addEventListener("click", toggleAudio);
 
   // Auto-play music when page loads.
   // Browser autoplay policy requires a user gesture first;
   // we try immediately and fallback to first-click-on-page.
   function attemptAutoPlay() {
     if (!hbdAudio) return;
-    hbdAudio.play().then(() => {
-      isAudioPlaying = true;
-      updateAudioUIState();
-    }).catch(() => {
-      // Autoplay blocked — wait for first user interaction
-      const onFirstInteraction = () => {
-        playGenuineAudio();
-        document.removeEventListener('click', onFirstInteraction);
-        document.removeEventListener('touchstart', onFirstInteraction);
-      };
-      document.addEventListener('click', onFirstInteraction);
-      document.addEventListener('touchstart', onFirstInteraction);
-    });
+    hbdAudio
+      .play()
+      .then(() => {
+        isAudioPlaying = true;
+        updateAudioUIState();
+      })
+      .catch(() => {
+        // Autoplay blocked — wait for first user interaction
+        const onFirstInteraction = () => {
+          playGenuineAudio();
+          document.removeEventListener("click", onFirstInteraction);
+          document.removeEventListener("touchstart", onFirstInteraction);
+        };
+        document.addEventListener("click", onFirstInteraction);
+        document.addEventListener("touchstart", onFirstInteraction);
+      });
   }
   attemptAutoPlay();
 
   // Sync Audio Progress Scrubber
   if (hbdAudio && playerProgressFill) {
-    hbdAudio.addEventListener('timeupdate', () => {
+    hbdAudio.addEventListener("timeupdate", () => {
       if (hbdAudio.duration) {
         const pct = (hbdAudio.currentTime / hbdAudio.duration) * 100;
         playerProgressFill.style.width = `${pct}%`;
@@ -294,29 +338,29 @@ Selamat menikmati hari istimewamu! 💖`,
      SCENE NAVIGATION SYSTEM
      --------------------------------------------------------- */
   function showScene(sceneId) {
-    document.querySelectorAll('.scene').forEach(scene => {
-      scene.classList.remove('active');
+    document.querySelectorAll(".scene").forEach((scene) => {
+      scene.classList.remove("active");
     });
     const target = document.getElementById(sceneId);
     if (target) {
-      target.classList.add('active');
+      target.classList.add("active");
     }
   }
 
   /* ---------------------------------------------------------
      SCENE 1: EDITORIAL LOADING SCREEN
      --------------------------------------------------------- */
-  const progressFill = document.getElementById('progressFill');
-  const progressPercent = document.getElementById('progressPercent');
-  const loadingStatusText = document.getElementById('loadingStatusText');
-  const btnProceedPin = document.getElementById('btnProceedPin');
+  const progressFill = document.getElementById("progressFill");
+  const progressPercent = document.getElementById("progressPercent");
+  const loadingStatusText = document.getElementById("loadingStatusText");
+  const btnProceedPin = document.getElementById("btnProceedPin");
 
   const loadingStatuses = [
-    'Mengumpulkan lembar-lembar kenangan terindah...',
-    'Menyiapkan lilin dan kue perayaan spesial... 🎂',
-    'Menghangatkan melodi hari ulang tahunmu... 🎵',
-    'Menyegel voucher dan surat penuh rahasia... 💌',
-    'Surprise kamu telah siap seutuhnya! ✨'
+    "Mengumpulkan lembar-lembar kenangan terindah...",
+    "Menyiapkan lilin dan kue perayaan spesial... 🎂",
+    "Menghangatkan melodi hari ulang tahunmu... 🎵",
+    "Menyegel voucher dan surat penuh rahasia... ",
+    "Surprise kamu telah siap seutuhnya!",
   ];
 
   let currentLoadingPct = 0;
@@ -328,18 +372,21 @@ Selamat menikmati hari istimewamu! 💖`,
       if (currentLoadingPct >= 100) {
         currentLoadingPct = 100;
         clearInterval(timer);
-        if (progressFill) progressFill.style.width = '100%';
-        if (progressPercent) progressPercent.textContent = '100%';
-        if (loadingStatusText) loadingStatusText.textContent = loadingStatuses[4];
+        if (progressFill) progressFill.style.width = "100%";
+        if (progressPercent) progressPercent.textContent = "100%";
+        if (loadingStatusText)
+          loadingStatusText.textContent = loadingStatuses[4];
         if (btnProceedPin) {
-          btnProceedPin.removeAttribute('disabled');
+          btnProceedPin.removeAttribute("disabled");
         }
         triggerMicroConfetti();
       } else {
         if (progressFill) progressFill.style.width = `${currentLoadingPct}%`;
-        if (progressPercent) progressPercent.textContent = `${String(currentLoadingPct).padStart(2, '0')}%`;
+        if (progressPercent)
+          progressPercent.textContent = `${String(currentLoadingPct).padStart(2, "0")}%`;
         const textIdx = Math.min(Math.floor((currentLoadingPct / 100) * 4), 3);
-        if (loadingStatusText) loadingStatusText.textContent = loadingStatuses[textIdx];
+        if (loadingStatusText)
+          loadingStatusText.textContent = loadingStatuses[textIdx];
       }
     }, 240);
   }
@@ -347,19 +394,19 @@ Selamat menikmati hari istimewamu! 💖`,
   startEditorialLoading();
 
   if (btnProceedPin) {
-    btnProceedPin.addEventListener('click', () => {
+    btnProceedPin.addEventListener("click", () => {
       playClickFX(540);
-      showScene('scene-pin');
+      showScene("scene-pin");
     });
   }
 
   /* ---------------------------------------------------------
      SCENE 2: iOS-INSPIRED PASSCODE SECURITY
      --------------------------------------------------------- */
-  let enteredPin = '';
-  const pinDots = document.querySelectorAll('#pinDotsWrapper .pin-dot');
-  const pinDotsWrapper = document.getElementById('pinDotsWrapper');
-  const pinHintDisplay = document.getElementById('pinHintDisplay');
+  let enteredPin = "";
+  const pinDots = document.querySelectorAll("#pinDotsWrapper .pin-dot");
+  const pinDotsWrapper = document.getElementById("pinDotsWrapper");
+  const pinHintDisplay = document.getElementById("pinHintDisplay");
 
   function renderPinHint() {
     if (pinHintDisplay) {
@@ -371,10 +418,10 @@ Selamat menikmati hari istimewamu! 💖`,
   function updatePinIndicators() {
     pinDots.forEach((dot, index) => {
       if (index < enteredPin.length) {
-        dot.classList.add('filled');
+        dot.classList.add("filled");
       } else {
-        dot.classList.remove('filled');
-        dot.classList.remove('error');
+        dot.classList.remove("filled");
+        dot.classList.remove("error");
       }
     });
   }
@@ -392,23 +439,23 @@ Selamat menikmati hari istimewamu! 💖`,
   }
 
   function verifyEnteredPin() {
-    const target = (config.pin || '1208').trim();
+    const target = (config.pin || "1208").trim();
     if (enteredPin === target) {
       // PIN SUCCESS
       playUnlockFX();
       triggerConfetti();
 
-      pinDots.forEach(dot => {
-        dot.style.background = '#2ecc71';
-        dot.style.borderColor = '#2ecc71';
-        dot.style.boxShadow = '0 0 14px #2ecc71';
+      pinDots.forEach((dot) => {
+        dot.style.background = "#2ecc71";
+        dot.style.borderColor = "#2ecc71";
+        dot.style.boxShadow = "0 0 14px #2ecc71";
       });
 
       // Start the genuine Happy Birthday song!
       playGenuineAudio();
 
       setTimeout(() => {
-        showScene('scene-camera');
+        showScene("scene-camera");
         initCameraExperience();
       }, 700);
     } else {
@@ -417,37 +464,37 @@ Selamat menikmati hari istimewamu! 💖`,
       if (navigator.vibrate) {
         navigator.vibrate([100, 50, 100]);
       }
-      pinDots.forEach(dot => dot.classList.add('error'));
-      if (pinDotsWrapper) pinDotsWrapper.classList.add('shake-anim');
+      pinDots.forEach((dot) => dot.classList.add("error"));
+      if (pinDotsWrapper) pinDotsWrapper.classList.add("shake-anim");
 
       setTimeout(() => {
-        enteredPin = '';
+        enteredPin = "";
         updatePinIndicators();
-        if (pinDotsWrapper) pinDotsWrapper.classList.remove('shake-anim');
-        pinDots.forEach(dot => dot.classList.remove('error'));
+        if (pinDotsWrapper) pinDotsWrapper.classList.remove("shake-anim");
+        pinDots.forEach((dot) => dot.classList.remove("error"));
       }, 600);
     }
   }
 
-  document.querySelectorAll('.numpad-key[data-key]').forEach(btn => {
-    btn.addEventListener('click', () => {
-      const key = btn.getAttribute('data-key');
+  document.querySelectorAll(".numpad-key[data-key]").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const key = btn.getAttribute("data-key");
       handleKeypadInput(key);
     });
   });
 
-  const keyClear = document.getElementById('keyClear');
+  const keyClear = document.getElementById("keyClear");
   if (keyClear) {
-    keyClear.addEventListener('click', () => {
+    keyClear.addEventListener("click", () => {
       playClickFX(320);
-      enteredPin = '';
+      enteredPin = "";
       updatePinIndicators();
     });
   }
 
-  const keyBackspace = document.getElementById('keyBackspace');
+  const keyBackspace = document.getElementById("keyBackspace");
   if (keyBackspace) {
-    keyBackspace.addEventListener('click', () => {
+    keyBackspace.addEventListener("click", () => {
       playClickFX(350);
       if (enteredPin.length > 0) {
         enteredPin = enteredPin.slice(0, -1);
@@ -459,45 +506,46 @@ Selamat menikmati hari istimewamu! 💖`,
   /* ---------------------------------------------------------
      SCENE 3: RETRO CAMERA VIEWFINDER & REEL (FUJI / LEICA)
      --------------------------------------------------------- */
-  const carouselTrack = document.getElementById('carouselTrack');
-  const storySegmentsBar = document.getElementById('storySegmentsBar');
-  const filmDateStamp = document.getElementById('filmDateStamp');
-  const photoCounter = document.getElementById('photoCounter');
-  const slideCaption = document.getElementById('slideCaption');
-  const camPrevBtn = document.getElementById('camPrevBtn');
-  const camNextBtn = document.getElementById('camNextBtn');
-  const shutterBtn = document.getElementById('shutterBtn');
-  const cameraFlash = document.getElementById('cameraFlash');
-  const recTimer = document.getElementById('recTimer');
-  const filmSimTag = document.getElementById('filmSimTag');
-  const viewfinderLens = document.getElementById('viewfinderLens');
-  const btnGoToCake = document.getElementById('btnGoToCake');
-  const tapZoneLeft = document.getElementById('tapZoneLeft');
-  const tapZoneRight = document.getElementById('tapZoneRight');
+  const carouselTrack = document.getElementById("carouselTrack");
+  const storySegmentsBar = document.getElementById("storySegmentsBar");
+  const filmDateStamp = document.getElementById("filmDateStamp");
+  const photoCounter = document.getElementById("photoCounter");
+  const slideCaption = document.getElementById("slideCaption");
+  const camPrevBtn = document.getElementById("camPrevBtn");
+  const camNextBtn = document.getElementById("camNextBtn");
+  const shutterBtn = document.getElementById("shutterBtn");
+  const cameraFlash = document.getElementById("cameraFlash");
+  const recTimer = document.getElementById("recTimer");
+  const filmSimTag = document.getElementById("filmSimTag");
+  const viewfinderLens = document.getElementById("viewfinderLens");
+  const btnGoToCake = document.getElementById("btnGoToCake");
+  const tapZoneLeft = document.getElementById("tapZoneLeft");
+  const tapZoneRight = document.getElementById("tapZoneRight");
 
   let currentPhotoIdx = 0;
   let recSecs = 24;
   let recInterval = null;
 
   function renderCameraSlides() {
-    const photos = config.photos && config.photos.length > 0 ? config.photos : defaultPhotos;
+    const photos =
+      config.photos && config.photos.length > 0 ? config.photos : defaultPhotos;
 
     // Render Story Bars
     if (storySegmentsBar) {
-      storySegmentsBar.innerHTML = '';
+      storySegmentsBar.innerHTML = "";
       photos.forEach((_, idx) => {
-        const seg = document.createElement('div');
-        seg.className = `story-segment ${idx === 0 ? 'active' : ''}`;
+        const seg = document.createElement("div");
+        seg.className = `story-segment ${idx === 0 ? "active" : ""}`;
         storySegmentsBar.appendChild(seg);
       });
     }
 
     // Render Image Slides
     if (carouselTrack) {
-      carouselTrack.innerHTML = '';
+      carouselTrack.innerHTML = "";
       photos.forEach((photo, idx) => {
-        const slide = document.createElement('div');
-        slide.className = `camera-slide ${idx === 0 ? 'active' : ''}`;
+        const slide = document.createElement("div");
+        slide.className = `camera-slide ${idx === 0 ? "active" : ""}`;
         slide.innerHTML = `<img src="${photo.url}" alt="Memory photo ${idx + 1}" loading="lazy">`;
         carouselTrack.appendChild(slide);
       });
@@ -507,73 +555,120 @@ Selamat menikmati hari istimewamu! 💖`,
   }
 
   function updateSlideView() {
-    const photos = config.photos && config.photos.length > 0 ? config.photos : defaultPhotos;
-    const slides = document.querySelectorAll('.camera-slide');
-    const segments = document.querySelectorAll('.story-segment');
+    const photos =
+      config.photos && config.photos.length > 0 ? config.photos : defaultPhotos;
+    const slides = document.querySelectorAll(".camera-slide");
+    const segments = document.querySelectorAll(".story-segment");
 
     slides.forEach((slide, idx) => {
-      slide.classList.toggle('active', idx === currentPhotoIdx);
+      slide.classList.toggle("active", idx === currentPhotoIdx);
     });
 
     segments.forEach((seg, idx) => {
-      seg.classList.remove('filled', 'active');
+      seg.classList.remove("filled", "active");
       if (idx < currentPhotoIdx) {
-        seg.classList.add('filled');
+        seg.classList.add("filled");
       } else if (idx === currentPhotoIdx) {
-        seg.classList.add('active');
+        seg.classList.add("active");
       }
     });
 
     const cur = photos[currentPhotoIdx];
     if (cur) {
       if (filmDateStamp) filmDateStamp.textContent = cur.date || "'26 09 29";
-      if (photoCounter) photoCounter.textContent = `${currentPhotoIdx + 1} / ${photos.length}`;
-      if (slideCaption) slideCaption.textContent = cur.caption || '';
+      if (photoCounter)
+        photoCounter.textContent = `${currentPhotoIdx + 1} / ${photos.length}`;
+      if (slideCaption) slideCaption.textContent = cur.caption || "";
     }
   }
 
   function nextPhoto() {
-    const photos = config.photos && config.photos.length > 0 ? config.photos : defaultPhotos;
+    const photos =
+      config.photos && config.photos.length > 0 ? config.photos : defaultPhotos;
     playClickFX(520);
     currentPhotoIdx = (currentPhotoIdx + 1) % photos.length;
     updateSlideView();
   }
 
   function prevPhoto() {
-    const photos = config.photos && config.photos.length > 0 ? config.photos : defaultPhotos;
+    const photos =
+      config.photos && config.photos.length > 0 ? config.photos : defaultPhotos;
     playClickFX(470);
     currentPhotoIdx = (currentPhotoIdx - 1 + photos.length) % photos.length;
     updateSlideView();
   }
 
-  if (camNextBtn) camNextBtn.addEventListener('click', nextPhoto);
-  if (camPrevBtn) camPrevBtn.addEventListener('click', prevPhoto);
-  if (tapZoneRight) tapZoneRight.addEventListener('click', nextPhoto);
-  if (tapZoneLeft) tapZoneLeft.addEventListener('click', prevPhoto);
+  if (camNextBtn) camNextBtn.addEventListener("click", nextPhoto);
+  if (camPrevBtn) camPrevBtn.addEventListener("click", prevPhoto);
+  if (tapZoneRight) tapZoneRight.addEventListener("click", nextPhoto);
+  if (tapZoneLeft) tapZoneLeft.addEventListener("click", prevPhoto);
+
+  // Physical Camera Body Hotspot Controls
+  const hotspotShutter = document.getElementById("hotspotShutter");
+  const hotspotZoomW = document.getElementById("hotspotZoomW");
+  const hotspotZoomT = document.getElementById("hotspotZoomT");
+  const hotspotDpadLeft = document.getElementById("hotspotDpadLeft");
+  const hotspotDpadRight = document.getElementById("hotspotDpadRight");
+  const hotspotDpadFunc = document.getElementById("hotspotDpadFunc");
+  const hotspotDisp = document.getElementById("hotspotDisp");
+  const hotspotMenu = document.getElementById("hotspotMenu");
+
+  if (hotspotZoomW) hotspotZoomW.addEventListener("click", prevPhoto);
+  if (hotspotDpadLeft) hotspotDpadLeft.addEventListener("click", prevPhoto);
+  if (hotspotZoomT) hotspotZoomT.addEventListener("click", nextPhoto);
+  if (hotspotDpadRight) hotspotDpadRight.addEventListener("click", nextPhoto);
+
+  if (hotspotShutter)
+    hotspotShutter.addEventListener("click", () => {
+      if (shutterBtn) shutterBtn.click();
+    });
+  if (hotspotDpadFunc)
+    hotspotDpadFunc.addEventListener("click", () => {
+      if (shutterBtn) shutterBtn.click();
+    });
+
+  if (hotspotDisp) {
+    hotspotDisp.addEventListener("click", () => {
+      const chips = Array.from(document.querySelectorAll(".sim-chip"));
+      if (chips.length > 0) {
+        const curIdx = chips.findIndex((c) => c.classList.contains("active"));
+        const nextIdx = (curIdx + 1) % chips.length;
+        chips[nextIdx].click();
+      }
+    });
+  }
+
+  if (hotspotMenu && btnGoToCake) {
+    hotspotMenu.addEventListener("click", () => {
+      btnGoToCake.click();
+    });
+  }
 
   // Shutter Snapshot Button
   if (shutterBtn) {
-    shutterBtn.addEventListener('click', () => {
+    shutterBtn.addEventListener("click", () => {
       playShutterFX();
       if (cameraFlash) {
-        cameraFlash.classList.add('flash-active');
+        cameraFlash.classList.add("flash-active");
         setTimeout(() => {
-          cameraFlash.classList.remove('flash-active');
+          cameraFlash.classList.remove("flash-active");
         }, 110);
       }
       triggerMicroConfetti();
-      spawnFloatingReaction('✨');
+      spawnFloatingReaction("");
     });
   }
 
   // Film Simulation Filter Chips
-  document.querySelectorAll('.sim-chip').forEach(chip => {
-    chip.addEventListener('click', () => {
+  document.querySelectorAll(".sim-chip").forEach((chip) => {
+    chip.addEventListener("click", () => {
       playClickFX(580);
-      document.querySelectorAll('.sim-chip').forEach(c => c.classList.remove('active'));
-      chip.classList.add('active');
+      document
+        .querySelectorAll(".sim-chip")
+        .forEach((c) => c.classList.remove("active"));
+      chip.classList.add("active");
 
-      const sim = chip.getAttribute('data-sim');
+      const sim = chip.getAttribute("data-sim");
       if (viewfinderLens) {
         viewfinderLens.className = `viewfinder-lens sim-${sim}`;
       }
@@ -584,26 +679,26 @@ Selamat menikmati hari istimewamu! 💖`,
   });
 
   // Floating Reactions Bar (Instagram / TikTok Live style)
-  document.querySelectorAll('.reaction-bubble').forEach(btn => {
-    btn.addEventListener('click', () => {
-      const emoji = btn.getAttribute('data-emoji') || '❤️';
+  document.querySelectorAll(".reaction-bubble").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const emoji = btn.getAttribute("data-emoji") || "❤️";
       playClickFX(650);
       spawnFloatingReaction(emoji);
     });
   });
 
   function spawnFloatingReaction(emoji) {
-    const overlay = document.getElementById('reactionsOverlay');
+    const overlay = document.getElementById("reactionsOverlay");
     if (!overlay) return;
 
-    const heart = document.createElement('div');
-    heart.className = 'floating-heart';
+    const heart = document.createElement("div");
+    heart.className = "floating-heart";
     heart.textContent = emoji;
 
     // Random horizontal position near center-right
     const randomLeft = Math.floor(Math.random() * 40) + 45;
     heart.style.left = `${randomLeft}%`;
-    heart.style.bottom = '80px';
+    heart.style.bottom = "80px";
 
     overlay.appendChild(heart);
     setTimeout(() => heart.remove(), 2400);
@@ -614,17 +709,17 @@ Selamat menikmati hari istimewamu! 💖`,
     if (!recInterval) {
       recInterval = setInterval(() => {
         recSecs++;
-        const mins = String(Math.floor(recSecs / 60)).padStart(2, '0');
-        const secs = String(recSecs % 60).padStart(2, '0');
+        const mins = String(Math.floor(recSecs / 60)).padStart(2, "0");
+        const secs = String(recSecs % 60).padStart(2, "0");
         if (recTimer) recTimer.textContent = `${mins}:${secs}`;
       }, 1000);
     }
   }
 
   if (btnGoToCake) {
-    btnGoToCake.addEventListener('click', () => {
+    btnGoToCake.addEventListener("click", () => {
       playClickFX(620);
-      showScene('scene-celebration');
+      showScene("scene-celebration");
       initCelebrationExperience();
     });
   }
@@ -632,14 +727,14 @@ Selamat menikmati hari istimewamu! 💖`,
   /* ---------------------------------------------------------
      SCENE 4: GRAND CELEBRATION (CAKE, SCRATCH CARD, WISHES)
      --------------------------------------------------------- */
-  const hbdCelebrantName = document.getElementById('hbdCelebrantName');
-  const cakeInstruction = document.getElementById('cakeInstruction');
-  const wishRevealCard = document.getElementById('wishRevealCard');
-  const envelopeWrap = document.getElementById('envelopeWrap');
-  const envToLabel = document.getElementById('envToLabel');
-  const rewardTitle = document.getElementById('rewardTitle');
-  const rewardDesc = document.getElementById('rewardDesc');
-  const scratchCanvas = document.getElementById('scratchCanvas');
+  const hbdCelebrantName = document.getElementById("hbdCelebrantName");
+  const cakeInstruction = document.getElementById("cakeInstruction");
+  const wishRevealCard = document.getElementById("wishRevealCard");
+  const envelopeWrap = document.getElementById("envelopeWrap");
+  const envToLabel = document.getElementById("envToLabel");
+  const rewardTitle = document.getElementById("rewardTitle");
+  const rewardDesc = document.getElementById("rewardDesc");
+  const scratchCanvas = document.getElementById("scratchCanvas");
   let candlesLit = 3;
 
   function initCelebrationExperience() {
@@ -671,38 +766,44 @@ Selamat menikmati hari istimewamu! 💖`,
 
   function resetCelebrationCandles() {
     candlesLit = 3;
-    document.querySelectorAll('.candle').forEach(c => c.classList.remove('extinguished'));
-    if (wishRevealCard) wishRevealCard.classList.remove('show');
-    if (cakeInstruction) cakeInstruction.textContent = 'Ketuk lilin untuk meniup & memanjatkan permohonan 🕯️';
+    document
+      .querySelectorAll(".candle")
+      .forEach((c) => c.classList.remove("extinguished"));
+    if (wishRevealCard) wishRevealCard.classList.remove("show");
+    if (cakeInstruction)
+      cakeInstruction.textContent =
+        "Ketuk lilin untuk meniup & memanjatkan permohonan 🕯️";
   }
 
   // Extinguish candles on tap
-  document.querySelectorAll('.candle').forEach(candle => {
-    candle.addEventListener('click', (e) => {
+  document.querySelectorAll(".candle").forEach((candle) => {
+    candle.addEventListener("click", (e) => {
       e.stopPropagation();
       extinguishCandle(candle);
     });
   });
 
-  const cakeWrapper = document.getElementById('cakeWrapper');
+  const cakeWrapper = document.getElementById("cakeWrapper");
   if (cakeWrapper) {
-    cakeWrapper.addEventListener('click', () => {
-      document.querySelectorAll('.candle:not(.extinguished)').forEach(candle => {
-        extinguishCandle(candle);
-      });
+    cakeWrapper.addEventListener("click", () => {
+      document
+        .querySelectorAll(".candle:not(.extinguished)")
+        .forEach((candle) => {
+          extinguishCandle(candle);
+        });
     });
   }
 
   function extinguishCandle(candleEl) {
-    if (candleEl.classList.contains('extinguished')) return;
+    if (candleEl.classList.contains("extinguished")) return;
 
-    candleEl.classList.add('extinguished');
+    candleEl.classList.add("extinguished");
     playBlowFX();
     candlesLit--;
 
     // Spawn realistic smoke particle
-    const smoke = document.createElement('div');
-    smoke.className = 'smoke-particle';
+    const smoke = document.createElement("div");
+    smoke.className = "smoke-particle";
     candleEl.appendChild(smoke);
     setTimeout(() => smoke.remove(), 1400);
 
@@ -710,10 +811,11 @@ Selamat menikmati hari istimewamu! 💖`,
       triggerGrandConfetti();
       playUnlockFX();
       if (cakeInstruction) {
-        cakeInstruction.textContent = 'Semua lilin padam! Permohonanmu telah dikirim ke semesta! ✨';
+        cakeInstruction.textContent =
+          "Semua lilin padam! Permohonanmu telah dikirim ke semesta! ";
       }
       if (wishRevealCard) {
-        wishRevealCard.classList.add('show');
+        wishRevealCard.classList.add("show");
       }
     }
   }
@@ -727,36 +829,40 @@ Selamat menikmati hari istimewamu! 💖`,
 
   function initScratchTicket() {
     if (!scratchCanvas) return;
-    const ctx = scratchCanvas.getContext('2d');
+    const ctx = scratchCanvas.getContext("2d");
     const width = scratchCanvas.width;
     const height = scratchCanvas.height;
 
     // Fill canvas with silver foil texture
-    ctx.globalCompositeOperation = 'source-over';
+    ctx.globalCompositeOperation = "source-over";
     const grad = ctx.createLinearGradient(0, 0, width, height);
-    grad.addColorStop(0, '#b8b5c4');
-    grad.addColorStop(0.3, '#dedae8');
-    grad.addColorStop(0.7, '#9f9cae');
-    grad.addColorStop(1, '#cac7d6');
+    grad.addColorStop(0, "#b8b5c4");
+    grad.addColorStop(0.3, "#dedae8");
+    grad.addColorStop(0.7, "#9f9cae");
+    grad.addColorStop(1, "#cac7d6");
     ctx.fillStyle = grad;
     ctx.fillRect(0, 0, width, height);
 
     // Decorative foil stamp text
-    ctx.fillStyle = '#4a4756';
+    ctx.fillStyle = "#4a4756";
     ctx.font = 'bold 13px "Space Mono", monospace';
-    ctx.textAlign = 'center';
-    ctx.fillText('★ GOSOK DI SINI UNTUK MEMBUKA KADO ★', width / 2, height / 2 - 6);
+    ctx.textAlign = "center";
+    ctx.fillText("GOSOK DI SINI UNTUK MEMBUKA KADO", width / 2, height / 2 - 6);
 
     ctx.font = '10px "Plus Jakarta Sans", sans-serif';
-    ctx.fillStyle = '#6d6a7d';
-    ctx.fillText('Kupon Hadiah Rahasia Khusus Hari Ulang Tahunmu', width / 2, height / 2 + 14);
+    ctx.fillStyle = "#6d6a7d";
+    ctx.fillText(
+      "Kupon Hadiah Rahasia Khusus Hari Ulang Tahunmu",
+      width / 2,
+      height / 2 + 14,
+    );
 
     isRewardUnlocked = false;
     scratchedPct = 0;
 
     function scratch(x, y) {
       if (isRewardUnlocked) return;
-      ctx.globalCompositeOperation = 'destination-out';
+      ctx.globalCompositeOperation = "destination-out";
       ctx.beginPath();
       ctx.arc(x, y, 18, 0, Math.PI * 2);
       ctx.fill();
@@ -783,7 +889,7 @@ Selamat menikmati hari istimewamu! 💖`,
           context.clearRect(0, 0, w, h);
           triggerConfetti();
           playUnlockFX();
-          showAppToast('🎉 Selamat! Kupon hadiahmu berhasil terbuka!');
+          showAppToast("🎉 Selamat! Kupon hadiahmu berhasil terbuka!");
         }
       } catch (e) {}
     }
@@ -796,7 +902,7 @@ Selamat menikmati hari istimewamu! 💖`,
       const scaleY = scratchCanvas.height / rect.height;
       return {
         x: (clientX - rect.left) * scaleX,
-        y: (clientY - rect.top) * scaleY
+        y: (clientY - rect.top) * scaleY,
       };
     }
 
@@ -812,7 +918,9 @@ Selamat menikmati hari istimewamu! 💖`,
       scratch(pos.x, pos.y);
     };
 
-    window.onmouseup = () => { isScratching = false; };
+    window.onmouseup = () => {
+      isScratching = false;
+    };
 
     // Mobile Touch Events
     scratchCanvas.ontouchstart = (e) => {
@@ -828,76 +936,82 @@ Selamat menikmati hari istimewamu! 💖`,
       scratch(pos.x, pos.y);
     };
 
-    scratchCanvas.ontouchend = () => { isScratching = false; };
+    scratchCanvas.ontouchend = () => {
+      isScratching = false;
+    };
   }
 
   /* ---------------------------------------------------------
      FEATURE: SHOOTING STAR WISH CAPSULE
      --------------------------------------------------------- */
-  const btnSendWish = document.getElementById('btnSendWish');
-  const userWishInput = document.getElementById('userWishInput');
+  const btnSendWish = document.getElementById("btnSendWish");
+  const userWishInput = document.getElementById("userWishInput");
 
   if (btnSendWish) {
-    btnSendWish.addEventListener('click', () => {
+    btnSendWish.addEventListener("click", () => {
       const wishText = userWishInput.value.trim();
       if (!wishText) {
-        showAppToast('Tuliskan harapanmu terlebih dahulu ya! ✨');
+        showAppToast("Tuliskan harapanmu terlebih dahulu ya! ");
         return;
       }
 
       // Save wish
       try {
-        localStorage.setItem('hbd_user_wish', wishText);
+        localStorage.setItem("hbd_user_wish", wishText);
       } catch (e) {}
 
       playUnlockFX();
       triggerConfetti();
 
       // Launch shooting star particle
-      const star = document.createElement('div');
-      star.className = 'shooting-star-particle';
-      star.style.left = '45%';
-      star.style.top = '60%';
+      const star = document.createElement("div");
+      star.className = "shooting-star-particle";
+      star.style.left = "45%";
+      star.style.top = "60%";
       document.body.appendChild(star);
       setTimeout(() => star.remove(), 1600);
 
-      userWishInput.value = '';
-      showAppToast('🌌 Harapanmu telah melesat menuju bintang-bintang! Semoga terkabul!');
+      userWishInput.value = "";
+      showAppToast(
+        "🌌 Harapanmu telah melesat menuju bintang-bintang! Semoga terkabul!",
+      );
     });
   }
 
   /* ---------------------------------------------------------
      FEATURE: BALLOONS PARADE MINI-GAME
      --------------------------------------------------------- */
-  const balloonCluster = document.getElementById('balloonCluster');
+  const balloonCluster = document.getElementById("balloonCluster");
   const balloonAffirmations = [
-    'Semoga rezekimu mengalir deras tanpa henti! 💖',
-    'Makin glowing, sehat, dan awet muda selalu! ✨',
-    'Semua impian & target hebatmu lekas tercapai! 🚀',
-    'Dikelilingi orang-orang yang tulus menyayangimu! 🌸',
-    'Selalu dipeluk kebahagiaan dan kedamaian hati! 🌟'
+    "Semoga rezekimu mengalir deras tanpa henti! 💖",
+    "Makin glowing, sehat, dan awet muda selalu! ",
+    "Semua impian & target hebatmu lekas tercapai! 🚀",
+    "Dikelilingi orang-orang yang tulus menyayangimu! 🌸",
+    "Selalu dipeluk kebahagiaan dan kedamaian hati! 🌟",
   ];
 
-  const balloonPalette = ['#e67389', '#70d6ff', '#e5c38e', '#b388ff'];
+  const balloonPalette = ["#e67389", "#70d6ff", "#e5c38e", "#b388ff"];
 
   function renderBalloonsCluster() {
     if (!balloonCluster) return;
-    balloonCluster.innerHTML = '';
+    balloonCluster.innerHTML = "";
 
     balloonPalette.forEach((color, idx) => {
-      const node = document.createElement('div');
-      node.className = 'balloon-node';
+      const node = document.createElement("div");
+      node.className = "balloon-node";
       node.innerHTML = `
         <div class="balloon-orb" style="background: ${color}; color: ${color};"></div>
         <div class="balloon-twine"></div>
       `;
 
-      node.addEventListener('click', () => {
+      node.addEventListener("click", () => {
         playPopFX();
         triggerMicroConfetti();
-        node.style.transform = 'scale(1.4)';
-        node.style.opacity = '0';
-        setTimeout(() => { node.style.visibility = 'hidden'; }, 150);
+        node.style.transform = "scale(1.4)";
+        node.style.opacity = "0";
+        setTimeout(() => {
+          node.style.visibility = "hidden";
+        }, 150);
 
         showAppToast(balloonAffirmations[idx % balloonAffirmations.length]);
       });
@@ -907,56 +1021,58 @@ Selamat menikmati hari istimewamu! 💖`,
   }
 
   function showAppToast(msg) {
-    let toast = document.querySelector('.app-toast-alert');
+    let toast = document.querySelector(".app-toast-alert");
     if (!toast) {
-      toast = document.createElement('div');
-      toast.className = 'app-toast-alert';
+      toast = document.createElement("div");
+      toast.className = "app-toast-alert";
       document.body.appendChild(toast);
     }
     toast.textContent = msg;
-    toast.classList.add('show');
-    setTimeout(() => { toast.classList.remove('show'); }, 3000);
+    toast.classList.add("show");
+    setTimeout(() => {
+      toast.classList.remove("show");
+    }, 3000);
   }
 
   /* ---------------------------------------------------------
      FEATURE: WAX-SEALED LOVE LETTER MODAL
      --------------------------------------------------------- */
-  const letterModal = document.getElementById('letterModal');
-  const closeLetterBtn = document.getElementById('closeLetterBtn');
-  const letterToName = document.getElementById('letterToName');
-  const letterBodyText = document.getElementById('letterBodyText');
-  const letterFromName = document.getElementById('letterFromName');
-  const replayCelebrationBtn = document.getElementById('replayCelebrationBtn');
-  const shareWishBtn = document.getElementById('shareWishBtn');
+  const letterModal = document.getElementById("letterModal");
+  const closeLetterBtn = document.getElementById("closeLetterBtn");
+  const letterToName = document.getElementById("letterToName");
+  const letterBodyText = document.getElementById("letterBodyText");
+  const letterFromName = document.getElementById("letterFromName");
+  const replayCelebrationBtn = document.getElementById("replayCelebrationBtn");
+  const shareWishBtn = document.getElementById("shareWishBtn");
 
   if (envelopeWrap) {
-    envelopeWrap.addEventListener('click', () => {
+    envelopeWrap.addEventListener("click", () => {
       playUnlockFX();
       openLoveLetter();
     });
   }
 
   function openLoveLetter() {
-    if (letterToName) letterToName.textContent = `Untuk ${config.name} yang Sangat Istimewa,`;
+    if (letterToName) letterToName.textContent = `Untuk ${config.name}`;
     if (letterFromName) letterFromName.textContent = config.sender;
 
     if (letterBodyText) {
-      letterBodyText.textContent = '';
-      letterModal.classList.add('open');
+      letterBodyText.textContent = "";
+      letterModal.classList.add("open");
       typewriterPrint(config.letter, letterBodyText);
     }
     triggerConfetti();
   }
 
   function closeLoveLetter() {
-    if (letterModal) letterModal.classList.remove('open');
+    if (letterModal) letterModal.classList.remove("open");
   }
 
-  if (closeLetterBtn) closeLetterBtn.addEventListener('click', closeLoveLetter);
+  if (closeLetterBtn) closeLetterBtn.addEventListener("click", closeLoveLetter);
 
   function typewriterPrint(text, container) {
     let idx = 0;
-    container.textContent = '';
+    container.textContent = "";
     const speed = 16;
     function printNext() {
       if (idx < text.length) {
@@ -969,24 +1085,26 @@ Selamat menikmati hari istimewamu! 💖`,
   }
 
   if (replayCelebrationBtn) {
-    replayCelebrationBtn.addEventListener('click', () => {
+    replayCelebrationBtn.addEventListener("click", () => {
       triggerGrandConfetti();
       playUnlockFX();
     });
   }
 
   if (shareWishBtn) {
-    shareWishBtn.addEventListener('click', () => {
+    shareWishBtn.addEventListener("click", () => {
       const shareMsg = `🎉 Selamat Ulang Tahun, ${config.name}!\n\n${config.letter}\n\n${config.sender}`;
       if (navigator.share) {
-        navigator.share({
-          title: `Happy Birthday ${config.name}`,
-          text: shareMsg,
-          url: window.location.href
-        }).catch(() => {});
+        navigator
+          .share({
+            title: `Happy Birthday ${config.name}`,
+            text: shareMsg,
+            url: window.location.href,
+          })
+          .catch(() => {});
       } else {
         navigator.clipboard.writeText(shareMsg);
-        showAppToast('✅ Pesan ucapan berhasil disalin ke clipboard!');
+        showAppToast("✅ Pesan ucapan berhasil disalin ke clipboard!");
       }
     });
   }
@@ -994,40 +1112,42 @@ Selamat menikmati hari istimewamu! 💖`,
   /* ---------------------------------------------------------
      FEATURE: CUSTOMIZER DRAWER
      --------------------------------------------------------- */
-  const settingsModal = document.getElementById('settingsModal');
-  const openSettingsBtn = document.getElementById('openSettingsBtn');
-  const closeSettingsBtn = document.getElementById('closeSettingsBtn');
-  const btnSaveSettings = document.getElementById('btnSaveSettings');
-  const inputName = document.getElementById('inputName');
-  const inputPin = document.getElementById('inputPin');
-  const inputHint = document.getElementById('inputHint');
-  const inputSender = document.getElementById('inputSender');
-  const inputReward = document.getElementById('inputReward');
-  const inputLetter = document.getElementById('inputLetter');
-  const inputCustomFiles = document.getElementById('inputCustomFiles');
-  const btnResetDefaultPhotos = document.getElementById('btnResetDefaultPhotos');
+  const settingsModal = document.getElementById("settingsModal");
+  const openSettingsBtn = document.getElementById("openSettingsBtn");
+  const closeSettingsBtn = document.getElementById("closeSettingsBtn");
+  const btnSaveSettings = document.getElementById("btnSaveSettings");
+  const inputName = document.getElementById("inputName");
+  const inputPin = document.getElementById("inputPin");
+  const inputHint = document.getElementById("inputHint");
+  const inputSender = document.getElementById("inputSender");
+  const inputReward = document.getElementById("inputReward");
+  const inputLetter = document.getElementById("inputLetter");
+  const inputCustomFiles = document.getElementById("inputCustomFiles");
+  const btnResetDefaultPhotos = document.getElementById(
+    "btnResetDefaultPhotos",
+  );
 
   if (openSettingsBtn) {
-    openSettingsBtn.addEventListener('click', () => {
+    openSettingsBtn.addEventListener("click", () => {
       inputName.value = config.name;
       inputPin.value = config.pin;
       inputHint.value = config.hint;
       inputSender.value = config.sender;
       inputReward.value = config.reward;
       inputLetter.value = config.letter;
-      settingsModal.classList.add('open');
+      settingsModal.classList.add("open");
     });
   }
 
   if (closeSettingsBtn) {
-    closeSettingsBtn.addEventListener('click', () => {
-      settingsModal.classList.remove('open');
+    closeSettingsBtn.addEventListener("click", () => {
+      settingsModal.classList.remove("open");
     });
   }
 
   // Handle Local Photo File Pickers
   if (inputCustomFiles) {
-    inputCustomFiles.addEventListener('change', (e) => {
+    inputCustomFiles.addEventListener("change", (e) => {
       const files = Array.from(e.target.files).slice(0, 5);
       if (files.length === 0) return;
 
@@ -1040,7 +1160,7 @@ Selamat menikmati hari istimewamu! 💖`,
           userPhotos.push({
             url: ev.target.result,
             date: `'26 09 29`,
-            caption: `"Momen spesial kita bersama ${config.name}..."`
+            caption: `"Momen spesial kita bersama ${config.name}..."`,
           });
           count++;
           if (count === files.length) {
@@ -1054,36 +1174,39 @@ Selamat menikmati hari istimewamu! 💖`,
   }
 
   if (btnResetDefaultPhotos) {
-    btnResetDefaultPhotos.addEventListener('click', () => {
+    btnResetDefaultPhotos.addEventListener("click", () => {
       config.photos = defaultPhotos;
-      showAppToast('Foto dikembalikan ke template bawaan.');
+      showAppToast("Foto dikembalikan ke template bawaan.");
     });
   }
 
   if (btnSaveSettings) {
-    btnSaveSettings.addEventListener('click', () => {
-      config.name = inputName.value.trim() || 'Alya Putri';
-      config.pin = inputPin.value.trim() || '1208';
-      config.hint = inputHint.value.trim() || 'Format: DDMM';
-      config.sender = inputSender.value.trim() || 'Dari Sahabatmu';
-      config.reward = inputReward.value.trim() || 'Traktir Makan Bebas Pilih Tempat! 🥂✨';
+    btnSaveSettings.addEventListener("click", () => {
+      config.name = inputName.value.trim() || "Alya Putri";
+      config.pin = inputPin.value.trim() || "1208";
+      config.hint = inputHint.value.trim() || "Format: DDMM";
+      config.sender = inputSender.value.trim() || "Dari Sahabatmu";
+      config.reward =
+        inputReward.value.trim() || "Traktir Makan Bebas Pilih Tempat! 🥂";
       config.letter = inputLetter.value.trim();
 
       try {
-        localStorage.setItem('hbd_editorial_v2', JSON.stringify(config));
+        localStorage.setItem("hbd_editorial_v2", JSON.stringify(config));
       } catch (e) {
-        console.warn('LocalStorage error:', e);
+        console.warn("LocalStorage error:", e);
       }
 
       renderPinHint();
-      if (hbdCelebrantName) hbdCelebrantName.textContent = `Happy Birthday, ${config.name}!`;
-      if (playerCelebrantTag) playerCelebrantTag.textContent = `Special Dedicated to ${config.name}`;
+      if (hbdCelebrantName)
+        hbdCelebrantName.textContent = `Happy Birthday, ${config.name}!`;
+      if (playerCelebrantTag)
+        playerCelebrantTag.textContent = `Special Dedicated to ${config.name}`;
       if (envToLabel) envToLabel.textContent = `Untuk: ${config.name}`;
       if (rewardDesc) rewardDesc.textContent = config.reward;
 
       renderCameraSlides();
-      settingsModal.classList.remove('open');
-      showAppToast('✅ Pengaturan berhasil diperbarui!');
+      settingsModal.classList.remove("open");
+      showAppToast("✅ Pengaturan berhasil diperbarui!");
     });
   }
 
@@ -1091,29 +1214,29 @@ Selamat menikmati hari istimewamu! 💖`,
      CONFETTI PARTICLE EFFECTS
      --------------------------------------------------------- */
   function triggerMicroConfetti() {
-    if (typeof confetti === 'function') {
+    if (typeof confetti === "function") {
       confetti({
         particleCount: 20,
         spread: 50,
-        origin: { y: 0.7 }
+        origin: { y: 0.7 },
       });
     }
   }
 
   function triggerConfetti() {
-    if (typeof confetti === 'function') {
+    if (typeof confetti === "function") {
       confetti({
         particleCount: 70,
         spread: 65,
-        origin: { y: 0.6 }
+        origin: { y: 0.6 },
       });
     }
   }
 
   function triggerGrandConfetti() {
-    if (typeof confetti === 'function') {
+    if (typeof confetti === "function") {
       const end = Date.now() + 2.4 * 1000;
-      const colors = ['#e5c38e', '#e67389', '#70d6ff', '#ffd166', '#ffffff'];
+      const colors = ["#e5c38e", "#e67389", "#70d6ff", "#ffd166", "#ffffff"];
 
       (function frame() {
         confetti({
@@ -1121,14 +1244,14 @@ Selamat menikmati hari istimewamu! 💖`,
           angle: 60,
           spread: 55,
           origin: { x: 0 },
-          colors: colors
+          colors: colors,
         });
         confetti({
           particleCount: 4,
           angle: 120,
           spread: 55,
           origin: { x: 1 },
-          colors: colors
+          colors: colors,
         });
 
         if (Date.now() < end) {
