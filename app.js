@@ -13,33 +13,53 @@ document.addEventListener("DOMContentLoaded", () => {
      --------------------------------------------------------- */
   const defaultPhotos = [
     {
-      url: "assets/foto1.jpeg",
-      date: "'24 08 12",
+      url: "assets/kenangan1.jpg",
+      date: "'28 02 26",
       caption:
-        '"Hari di mana senyummu menjadi pemandangan paling menenangkan di dunia..."',
+        '"Hari dimana masih pakai baju hitam putih, dan kita baru kenal"',
     },
     {
-      url: "https://images.unsplash.com/photo-1527529482837-4698179dc6ce?auto=format&fit=crop&w=800&q=80",
-      date: "'24 11 05",
-      caption:
-        '"Tawa lepas yang nggak pernah gagal menghangatkan setiap suasana."',
-    },
-    {
-      url: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=800&q=80",
-      date: "'25 01 01",
+      url: "assets/kenangan3.jpg",
+      date: "'02 04 26",
       caption: '"Menyambut tahun baru dengan harapan-harapan indah bersamamu."',
     },
     {
-      url: "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=800&q=80",
-      date: "'25 05 20",
+      url: "assets/kenangan4.jpg",
+      date: "'02 04 26",
       caption:
         '"Momen sederhana yang selalu meninggalkan rasa syukur mendalam."',
     },
     {
-      url: "https://images.unsplash.com/photo-1464349095431-e9a21285b5f3?auto=format&fit=crop&w=800&q=80",
-      date: "'26 09 29",
+      url: "assets/kenangan2.jpg",
+      date: "'03 05 26",
       caption:
-        '"Selamat merayakan usia yang baru! Semoga makin bersinar dan bahagia selalu! "',
+        '"Momen sederhana yang selalu meninggalkan rasa syukur mendalam."',
+    },
+    {
+      url: "assets/kenangan5.jpg",
+      date: "'03 05 26",
+      caption:
+        '"Momen sederhana yang selalu meninggalkan rasa syukur mendalam."',
+    },
+    {
+      url: "assets/Naira.jpg",
+      date: "'13 07 26",
+      caption: '"Momen pertama kali jogging bareng di GBK"',
+    },
+    {
+      url: "assets/fotobot2.jpg",
+      date: "'13 07 26",
+      caption: '"Momen pertama kali jogging bareng di GBK"',
+    },
+    {
+      url: "assets/foto1.jpg",
+      date: "'13 07 26",
+      caption: '"Moment pertama kali jogging bareng di GBK"',
+    },
+    {
+      url: "assets/foto1.jpeg",
+      date: "'01 11 26",
+      caption: '"Jogging di GBK untuk kedua kalinya"',
     },
   ];
 
@@ -47,7 +67,7 @@ document.addEventListener("DOMContentLoaded", () => {
     name: "Naira",
     pin: "1212",
     hint: "Format: <strong>DDMM</strong> (Tanggal &amp; bulan lahir kamu, contoh: 12 Desember = <strong>1212</strong>)",
-    sender: "Dari Seseorang temanmu yang selalu mendoakanmu.",
+    sender: "Dari seorang teman yang selalu mendoakanmu.",
     letter: `Kalau lu baca surat ini. Brarti gw udah berhasil ngasih kado buat lu nai. 
     
     Gw gk tau bagaimana cara ngucapin ulang tahun dengan baik dan benar. Gw gk tau apakah gw ngasih kado ini etis atau tidak. Mungkin ini terkesan berlebihan.
@@ -58,7 +78,7 @@ document.addEventListener("DOMContentLoaded", () => {
     
     Disclaimer nai: "Mungkin ini sangat beresiko. tapi ini harus gw sampaikan, karena gw gk mau memendam apapun dan gw gk ada ekpektasi apapun". 
     
-    Bagi gw lu tuh spesial. Ya lu tau lah maksud gw kenapa lu spesial. Tapi tenang aja nai, gw gk bakal ngejar lu. Gw juga gk mau perasaan ini mengganggu dan memberatkan lu nai. Masih banyak hal yang harus gw selesaikan sebelum gw ngejar cinta nai. lagi pula gw sadar banyak laki-laki lain yang lebih baik dari gw. Sebagai teman sudah lebih dari cukup nai. Gw gk tau setelah lu baca ini apakah lu akan ngejauh dari gw atau gk. 
+    Bagi gw lu tuh spesial. Ya lu tau lah maksud gw kenapa lu spesial. Tapi tenang aja nai, gw gk bakal ngejar lu. Gw juga gk mau perasaan ini mengganggu dan memberatkan lu nai. Masih banyak hal yang harus gw selesaikan. Status teman, sudah lebih dari cukup nai. Gw gk tau setelah lu baca ini apakah lu akan ngejauh dari gw atau gk. 
     
     Terakhir. terima kasih nai, karena lu udah jadi teman yang baik buat gw. Gw gk tau gimana cara ngucapin ini. Tapi gw mau bilang "I Love You Nai". dan semoga lu bisa mendapatkan kebahagiaan yang lu mau.`,
     photos: defaultPhotos,
@@ -1013,25 +1033,28 @@ document.addEventListener("DOMContentLoaded", () => {
           node.style.visibility = "hidden";
         }, 150);
 
-        showAppToast(balloonAffirmations[idx % balloonAffirmations.length]);
+        showAppToast(balloonAffirmations[idx % balloonAffirmations.length], 6000);
       });
 
       balloonCluster.appendChild(node);
     });
   }
 
-  function showAppToast(msg) {
+  let toastTimeout = null;
+
+  function showAppToast(msg, duration = 3000) {
     let toast = document.querySelector(".app-toast-alert");
     if (!toast) {
       toast = document.createElement("div");
       toast.className = "app-toast-alert";
       document.body.appendChild(toast);
     }
+    clearTimeout(toastTimeout);
     toast.textContent = msg;
     toast.classList.add("show");
-    setTimeout(() => {
+    toastTimeout = setTimeout(() => {
       toast.classList.remove("show");
-    }, 3000);
+    }, duration);
   }
 
   /* ---------------------------------------------------------
