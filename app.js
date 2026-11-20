@@ -68,19 +68,17 @@ document.addEventListener("DOMContentLoaded", () => {
     pin: "1212",
     hint: "Format: <strong>DDMM</strong> (Tanggal &amp; bulan lahir kamu, contoh: 12 Desember = <strong>1212</strong>)",
     sender: "Dari seorang teman yang selalu mendoakanmu.",
-    letter: `Kalau lu baca surat ini. Brarti gw udah berhasil ngasih kado buat lu nai. 
+    letter: `Kalau lu baca surat ini. Brarti gw udah berhasil ngasih kado buat lu. 
     
-    Gw gk tau bagaimana cara ngucapin ulang tahun dengan baik dan benar. Gw gk tau apakah gw ngasih kado ini etis atau tidak. Mungkin ini terkesan berlebihan.
+    "Selamat Ulang Tahun Ya Naira". Semoga lu selalu sehat, bahagia, dan sukses dalam segala hal.
     
-    "Selamat Ulang Tahun Ya". Semoga lu selalu sehat, bahagia, dan sukses dalam segala hal. Gw berharap, kita bisa terus bareng-bareng. 
+    Maaf ya nai. gw gk bisa ngasih kado ini secara langsung, dan mungkin kado ini gk seberapa buat lu nai. Tapi ini kado yang terbaik yang bisa gw kasih buat lu. Semoga lu suka ya nai.
     
-    Mungkin kado ini gk seberapa buat lu nai. Tapi ini kado yang terbaik yang bisa gw kasih buat lu. Semoga lu suka ya nai.
+    Terima kasih nai sudah menjadi teman yang baik. ngajak gw main, walaupun gw cuma bisa diam. Di kesempatan kali ini gw juga mau ungkapin perasaan gw ke lu, gw tuh suka sama lu nai. Tapi tenang, lu gk usah mikirin perasaan gw. Gw gk mau perasaan ini memberatkan lu, Gw cuma mau bilang doang, gk ada maksud apapun. Dikehidupan yang sekali ini, sayang kalau kita tidak bisa ngungkapin perasaan kita ke orang yang kita suka. Gw juga gk mao memendam apapun, karena itu sangat mengganggu buat gw nai. Sebenarnya gw pengen bilang ini langsung ke lu, tapi gw gk nemu moment yang pas. 
+
+    Lu juga pernah bilang kan sama gw kalo lu gk mau menjalin hubungan sama siapapun. Entah karena lu benar trauma atau emang bukan gw orangnya. Tapi, gw menghargai itu nai. Gw sadar gw terlalu menyedihkan untuk membuat orang bahagia.
     
-    Disclaimer nai: "Mungkin ini sangat beresiko. tapi ini harus gw sampaikan, karena gw gk mau memendam apapun dan gw gk ada ekpektasi apapun". 
-    
-    Bagi gw lu tuh spesial. Ya lu tau lah maksud gw kenapa lu spesial. Tapi tenang aja nai, gw gk bakal ngejar lu. Gw juga gk mau perasaan ini mengganggu dan memberatkan lu nai. Masih banyak hal yang harus gw selesaikan. Status teman, sudah lebih dari cukup nai. Gw gk tau setelah lu baca ini apakah lu akan ngejauh dari gw atau gk. 
-    
-    Terakhir. terima kasih nai, karena lu udah jadi teman yang baik buat gw. Gw gk tau gimana cara ngucapin ini. Tapi gw mau bilang "I Love You Nai". dan semoga lu bisa mendapatkan kebahagiaan yang lu mau.`,
+    Bersamaan dengan kado ini dan surat ini. Gw melepaskan perasaan gw, gw gk mau ini menjadi musibah buat gw, dan mengulangi kesalahan di masa lalu. Terakhir, gw mau bilang satu kalimat yang mungkin untuk yang pertama dan terakhir kalinya gw bilang ke lu: "I Love You Nai". Dan semoga lu mendapatkan kebahagiaan yang lu mau.`,
     photos: defaultPhotos,
   };
 
@@ -1033,7 +1031,10 @@ document.addEventListener("DOMContentLoaded", () => {
           node.style.visibility = "hidden";
         }, 150);
 
-        showAppToast(balloonAffirmations[idx % balloonAffirmations.length], 6000);
+        showAppToast(
+          balloonAffirmations[idx % balloonAffirmations.length],
+          6000,
+        );
       });
 
       balloonCluster.appendChild(node);
